@@ -96,8 +96,38 @@
     line-height: 27px;
     color: #222222;
   }
-  p {
-
+  img {
+    max-width: 100%;
+  }
+  table {
+    width: 100%;
+    tr {
+      height: 80px;
+      border-bottom: 1px solid #C4C4C4;
+      &:last-child {
+        border-bottom: none;
+      }
+      td {
+        &:first-child {
+          width: 55%;
+        }
+      }
+    }
+    .gradient-btn{
+      width: 110px;
+      margin-right: 6px;
+      float: right;
+      a {
+        color: #FFFFFF;
+      }
+    }
+    .border-btn {
+      width: 142px;
+      float: right;
+      a {
+        color: $color-violet;
+      }
+    }
   }
 }
 .short-descr {

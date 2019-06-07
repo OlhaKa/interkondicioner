@@ -493,6 +493,28 @@ ul ul a {
     font-weight: 600;
     line-height: 27px;
     color: #222222; }
+  #productContent img {
+    max-width: 100%; }
+  #productContent table {
+    width: 100%; }
+    #productContent table tr {
+      height: 80px;
+      border-bottom: 1px solid #C4C4C4; }
+      #productContent table tr:last-child {
+        border-bottom: none; }
+      #productContent table tr td:first-child {
+        width: 55%; }
+    #productContent table .gradient-btn {
+      width: 110px;
+      margin-right: 6px;
+      float: right; }
+      #productContent table .gradient-btn a {
+        color: #FFFFFF; }
+    #productContent table .border-btn {
+      width: 142px;
+      float: right; }
+      #productContent table .border-btn a {
+        color: #2F3370; }
 
 .short-descr {
   font-weight: 600;
@@ -716,6 +738,23 @@ textarea:focus {
     background: -webkit-linear-gradient(left, #0085E6 0%, #2F3370 100%);
     background: -o-linear-gradient(left, #0085E6 0%, #2F3370 100%);
     background: linear-gradient(90deg, #0085E6 0%, #2F3370 100%); }
+
+.border-btn {
+  cursor: pointer;
+  padding: 12px 0;
+  text-align: center;
+  color: #2F3370;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  width: 197px;
+  height: 48px;
+  border: 1px solid #0085E6;
+  border-radius: 30px;
+  -webkit-transition: border .3s ease;
+  -o-transition: border .3s ease;
+  transition: border .3s ease; }
+  .border-btn:hover {
+    border: 1px solid #2F3370; }
 
 .header-top {
   background: -webkit-linear-gradient(359.77deg, rgba(97, 194, 239, 0.1) 11.07%, #61C2EF 83.3%);

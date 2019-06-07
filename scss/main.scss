@@ -88,6 +88,24 @@ textarea {
   }
 }
 
+.border-btn {
+  cursor: pointer;
+  padding: 12px 0;
+  text-align: center;
+  color: $color-violet ;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  width: 197px;
+  height: 48px;
+  border: 1px solid $color-blue;
+  border-radius: 30px;
+  transition: border .3s ease;
+
+  &:hover {
+    border: 1px solid $color-violet;
+  }
+}
+
 //--------HEADER-----------
 .header-top {
   background: linear-gradient(90.23deg, rgba(97, 194, 239, 0.1) 11.07%, #61C2EF 83.3%);
