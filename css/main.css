@@ -97,8 +97,8 @@
     line-height: 29px;
     background-color: white;
     border-radius: 4px;
-    -webkit-box-shadow: 0px 0px 8px rgba(196, 196, 196, 0.5);
-    box-shadow: 0px 0px 8px rgba(196, 196, 196, 0.5);
+    -webkit-box-shadow: 0 0 8px rgba(196, 196, 196, 0.5);
+    box-shadow: 0 0 8px rgba(196, 196, 196, 0.5);
     min-height: 240px;
     padding: 15px;
     text-align: center; }
@@ -591,6 +591,151 @@ ul ul a {
     transform-origin: center;
     margin-left: 40px; }
 
+.news {
+  padding-bottom: 275px;
+  background: -webkit-linear-gradient(270.86deg, rgba(245, 245, 245, 0.6) 7.74%, #FFFFFF 91.34%);
+  background: -o-linear-gradient(270.86deg, rgba(245, 245, 245, 0.6) 7.74%, #FFFFFF 91.34%);
+  background: linear-gradient(179.14deg, rgba(245, 245, 245, 0.6) 7.74%, #FFFFFF 91.34%);
+  position: relative; }
+  .news h1 {
+    color: #2F3370; }
+  .news .news-grid {
+    margin-bottom: 32px; }
+
+.news-item {
+  padding-bottom: 275px;
+  position: relative; }
+  .news-item h1 {
+    text-align: center;
+    margin-bottom: 62px; }
+  .news-item .news-date {
+    color: #7F899D;
+    font-size: 18px;
+    margin-bottom: 30px; }
+  .news-item .news-descr {
+    font-weight: 600;
+    font-size: 24px;
+    color: #222222;
+    margin-bottom: 44px; }
+    .news-item .news-descr img {
+      display: block;
+      margin: 34px auto 0;
+      width: 100%;
+      max-width: 100%; }
+  .news-item .back-btn {
+    margin-top: 80px;
+    text-align: right; }
+    .news-item .back-btn .cta {
+      position: relative;
+      margin: auto;
+      padding: 19px 22px;
+      -webkit-transition: all .2s ease;
+      -o-transition: all .2s ease;
+      transition: all .2s ease; }
+      .news-item .back-btn .cta:before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        right: 0;
+        display: block;
+        border-radius: 30px;
+        background: -webkit-gradient(linear, left top, right top, from(#0085E6), to(#61C2EF));
+        background: -webkit-linear-gradient(left, #0085E6 0%, #61C2EF 100%);
+        background: -o-linear-gradient(left, #0085E6 0%, #61C2EF 100%);
+        background: linear-gradient(90deg, #0085E6 0%, #61C2EF 100%);
+        width: 48px;
+        height: 48px;
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease; }
+      .news-item .back-btn .cta span {
+        position: relative;
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        vertical-align: middle;
+        color: #2F3370; }
+      .news-item .back-btn .cta img {
+        position: relative;
+        top: 0;
+        margin-left: 10px;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2;
+        -webkit-transform: translateX(-5px);
+        -ms-transform: translateX(-5px);
+        transform: translateX(-5px);
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease; }
+      .news-item .back-btn .cta:hover:before {
+        width: 100%; }
+        .news-item .back-btn .cta:hover:before img {
+          -webkit-transform: translateX(0);
+          -ms-transform: translateX(0);
+          transform: translateX(0); }
+      .news-item .back-btn .cta:active {
+        -webkit-transform: scale(0.96);
+        -ms-transform: scale(0.96);
+        transform: scale(0.96); }
+  .news-item .gradient-btn {
+    width: 166px; }
+    .news-item .gradient-btn .fas {
+      color: #FFFFFF;
+      font-size: 28px;
+      margin-right: 15px; }
+
+.news-img {
+  max-height: 224px; }
+  .news-img .slick-slide {
+    border: none; }
+    .news-img .slick-slide:focus {
+      outline: none; }
+  .news-img img {
+    max-width: 100%;
+    padding: 0 15px;
+    width: 100%; }
+  .news-img .slick-dots {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 30px; }
+    .news-img .slick-dots li {
+      display: inline-block;
+      margin: 0 10px; }
+      .news-img .slick-dots li button {
+        border: none;
+        width: 4px;
+        height: 4px;
+        background: #61C2EF;
+        font-size: 0;
+        padding: 0;
+        border-radius: 50%; }
+
+@media (max-width: 767.98px) {
+  main h1 {
+    font-size: 30px;
+    line-height: 45px; }
+  .news-item .gradient-btn {
+    margin-bottom: 55px; }
+  .news-item p {
+    font-size: 14px;
+    line-height: 21px; }
+  .news-item .news-date {
+    font-size: 15px; }
+  .news-descr p {
+    font-size: 16px;
+    line-height: 24px; } }
+
 /* Slider */
 .slick-slider {
   position: relative;
@@ -718,7 +863,6 @@ textarea:focus {
 
 .gradient-btn {
   cursor: pointer;
-  padding: 12px 0;
   text-align: center;
   color: #FFFFFF;
   text-transform: uppercase;
@@ -733,6 +877,19 @@ textarea:focus {
   -webkit-transition: background .3s ease;
   -o-transition: background .3s ease;
   transition: background .3s ease; }
+  .gradient-btn a {
+    color: #FFFFFF;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 30px; }
   .gradient-btn:hover {
     background: -webkit-gradient(linear, left top, right top, from(#0085E6), to(#2F3370));
     background: -webkit-linear-gradient(left, #0085E6 0%, #2F3370 100%);
@@ -886,6 +1043,17 @@ textarea:focus {
       color: #777777;
       font-size: 14px; }
 
+.form-btn.gradient-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
 .contact-form {
   display: none;
   padding: 39px 56px 48px 49px;
@@ -893,8 +1061,8 @@ textarea:focus {
   position: absolute;
   max-width: 558px;
   background-color: #fff;
-  -webkit-box-shadow: 0px 0px 8px rgba(196, 196, 196, 0.5);
-  box-shadow: 0px 0px 8px rgba(196, 196, 196, 0.5);
+  -webkit-box-shadow: 0 0 8px rgba(196, 196, 196, 0.5);
+  box-shadow: 0 0 8px rgba(196, 196, 196, 0.5);
   border-radius: 4px; }
   .contact-form .form-btn {
     position: absolute;
