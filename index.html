@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/fontawesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -37,38 +38,57 @@
     </div>
     <div class="header-btm">
         <div class="container">
+            <div class="logo-sm"><img src="media/logo-sm.svg" alt=""></div>
             <ul class="nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">О компании</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">1</a>
-                        <a class="dropdown-item" href="#">2</a>
-                        <a class="dropdown-item" href="#">3</a>
-                        <a class="dropdown-item" href="#">4</a>
+                <li class="nav-item">
+                    <a class="nav-link">О компании</a>
+                    <div class="drop-menu">
+                        <a class="dropdown-item" href="#">О нас</a>
+                        <a class="dropdown-item" href="#">Производство</a>
+                        <a class="dropdown-item" href="#">Сервис</a>
+                        <a class="dropdown-item" href="#">Стендовые испытания</a>
+                        <a class="dropdown-item" href="#">Вакансии</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Каталог</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Общепромышленная вентиляция </a>
-                        <ul>
-                            <li><a href=" ">Вентиляторы радиальные</a></li>
-                            <li><a href="">Вентиляторы крышные</a></li>
-                            <li><a href=""></a>Вентиляторы осевые</li>
-                            <li><a href="">Вентиляторы канальные</a></li>
-                        </ul>
-                        <a class="dropdown-item" href="#">Противопожарное оборудование </a>
-                        <ul>
-                            <li><a href=" ">Вентиляторы дымоудаления </a></li>
-                            <li><a href="">Клапаны дымоудаления</a></li>
-                            <li><a href=""></a>Клапаны огнезадерживающие</li>
-                        </ul>
-                        <a class="dropdown-item" href="#">Оборудование для монтажа вентиляторов </a>
-                        <ul>
-                            <li><a href=" ">Стаканы</a></li>
-                            <li><a href="">Виброизоляторы и гибкие вставки</a></li>
-                        </ul>
-
+                <li class="nav-item ">
+                    <a class="nav-link">Каталог</a>
+                    <div class="drop-menu with-columns">
+                        <div class="menu-column">
+                            <a class="dropdown-item" href="#">Общепромышленная вентиляция </a>
+                            <ul>
+                                <li><a href=" ">Вентиляторы радиальные</a></li>
+                                <li><a href="">Вентиляторы крышные</a></li>
+                                <li><a href="">Вентиляторы осевые</a></li>
+                                <li><a href="">Вентиляторы канальные</a></li>
+                            </ul>
+                            <a class="dropdown-item" href="#">Противопожарное оборудование </a>
+                            <ul>
+                                <li><a href=" ">Вентиляторы дымоудаления </a></li>
+                                <li><a href="">Клапаны дымоудаления</a></li>
+                                <li><a href="">Клапаны огнезадерживающие</a></li>
+                            </ul>
+                            <a class="dropdown-item" href="#">Оборудование для монтажа вентиляторов </a>
+                            <ul>
+                                <li><a href=" ">Стаканы</a></li>
+                                <li><a href="">Виброизоляторы и гибкие вставки</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <a class="dropdown-item" href="#">Кондиционеры центральные каркасные КЦК</a>
+                            <a class="dropdown-item" href="#">Сетевое оборудование</a>
+                            <ul>
+                                <li><a href=" ">Клапаны и заслонки </a></li>
+                                <li><a href="">Узлы прохода, дефлекторы, зонты, двери, шумоглушители </a></li>
+                                <li><a href="">Фильтры, ИРП</a></li>
+                            </ul>
+                            <a class="dropdown-item" href="#">Автоматизация </a>
+                            <a class="dropdown-item" href="#">Отопительное оборудование  </a>
+                            <ul>
+                                <li><a href=" ">Агрегаты воздушно-отопительные  </a></li>
+                                <li><a href="">Воздухонагреватель (калориферы) </a></li>
+                            </ul>
+                            <a class="dropdown-item" href="#">Скачать каталоги</a>
+                        </div>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -80,9 +100,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Новости</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Контакты</a>
-                    <div class="dropdown-menu">
+                <li class="nav-item">
+                    <a class="nav-link">Контакты</a>
+                    <div class="drop-menu">
                         <a class="dropdown-item" href="#">1</a>
                         <a class="dropdown-item" href="#">2</a>
                         <a class="dropdown-item" href="#">3</a>
@@ -90,8 +110,52 @@
                     </div>
                 </li>
             </ul>
-            <div class="search-btn"></div>
+            <div class="search-btn open-search"></div>
             <div class="form-btn gradient-btn">ЗАДАТЬ ВОПРОС</div>
+            <div class="contact-form">
+                <p>Вы можете задать вопрос, заполнив форму, и наши менеджеры ответят вам в самое ближайшее время!</p>
+                <span class="form-btn">
+                <img src="media/close.svg" alt="">
+            </span>
+                <form action="">
+                    <div class="form-item">
+                        <input type="text" placeholder="Имя:" name="name" id="name" autocomplete="off">
+                        <label for="name">Имя:</label>
+                    </div>
+                    <div class="form-item">
+                        <input type="tel" placeholder="Телефон:" name="tel" id="tel" autocomplete="off">
+                        <label for="tel">Телефон:</label>
+                    </div>
+                    <div class="form-item">
+                        <input type="email" placeholder="Email:" name="email" id="email" autocomplete="off">
+                        <label for="email">Email:</label>
+                    </div>
+                    <div class="form-item">
+                        <input type="text" placeholder="Организация:" name="org" id="org" autocomplete="off">
+                        <label for="org">Организация:</label>
+                    </div>
+                    <div class="form-item">
+                      <textarea name="message" id="message" cols="3" rows="2" placeholder="Сообщение:">
+                </textarea>
+                        <label for="message">Сообщение:</label>
+                    </div>
+                    <div class="download-file">
+                        Прикрепить фаил
+                        <input id="file" type="file" multiple>
+                        <div>
+                            Загруженно файлов: <span class="files-count">0</span>
+                        </div>
+                        <div class="allow-files">
+                            Максимальный размер файла: <span>9.91 MB</span>
+                        </div>
+                        <div class="alert-message">
+                            <span>размер файла превышает максимальный</span></div>
+                    </div>
+                    <div>
+                    </div>
+                    <button class="gradient-btn">отправить</button>
+                </form>
+            </div>
         </div>
         <div class="search-wrap">
             <div class="search-line">
@@ -103,50 +167,7 @@
                 </span>
             </div>
         </div>
-        <div class="contact-form">
-            <p>Вы можете задать вопрос, заполнив форму, и наши менеджеры ответят вам в самое ближайшее время!</p>
-            <span class="form-btn">
-                <img src="media/close.svg" alt="">
-            </span>
-            <form action="">
-                <div class="form-item">
-                    <input type="text" placeholder="Имя:" name="name" id="name" autocomplete="off">
-                    <label for="name">Имя:</label>
-                </div>
-                <div class="form-item">
-                    <input type="tel" placeholder="Телефон:" name="tel" id="tel" autocomplete="off">
-                    <label for="tel">Телефон:</label>
-                </div>
-                <div class="form-item">
-                    <input type="email" placeholder="Email:" name="email" id="email" autocomplete="off">
-                    <label for="email">Email:</label>
-                </div>
-                <div class="form-item">
-                    <input type="text" placeholder="Организация:" name="org" id="org" autocomplete="off">
-                    <label for="org">Организация:</label>
-                </div>
-                <div class="form-item">
-                      <textarea name="message" id="message" cols="3" rows="2" placeholder="Сообщение:">
-                </textarea>
-                    <label for="message">Сообщение:</label>
-                </div>
-                <div class="download-file">
-                    Прикрепить фаил
-                    <input id="file" type="file" multiple>
-                    <div>
-                        Загруженно файлов: <span class="files-count">0</span>
-                    </div>
-                    <div class="allow-files">
-                        Максимальный размер файла: <span>9.91 MB</span>
-                    </div>
-                    <div class="alert-message">
-                        <span>размер файла превышает максимальный</span></div>
-                </div>
-                <div>
-                </div>
-                <button class="gradient-btn">отправить</button>
-            </form>
-        </div>
+
     </div>
 </header>
 <section class="section1">
@@ -315,6 +336,7 @@
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/slick.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

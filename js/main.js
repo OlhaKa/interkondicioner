@@ -56,7 +56,31 @@ $(document).ready(function () {
         ]
     });
 
+    $('.about-slider').slick({
+        slidesToShow: 3,
+    });
 
+    $(".review-thumb").fancybox({
+        fitToView: false,
+        maxWidth: "100%",
+        width: "1200"
+    });
+    // ----------- HEADER VIEW CHANGE---------
+    changeHeaderView ();
+
+    function changeHeaderView () {
+        var scroll = $(window).scrollTop();
+        if (scroll > 140 ) {
+            $('header').addClass('scrolled');
+        } else  {
+            $('header').removeClass('scrolled');
+
+        }
+    }
+
+    $(window).scroll(function () {
+        changeHeaderView ()
+    });
 
     var uploadField = document.getElementById("file");
     uploadField.onchange = function () {

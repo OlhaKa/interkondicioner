@@ -21,9 +21,16 @@
       line-height: 24px;
     }
   }
+  .program-descr-wrap {
+    margin-bottom: 48px;
+  }
 }
 
-@media (max-width: 991.98px) {  }
+@media (max-width: 991.98px) {
+  .design-pr {
+    display: none;
+  }
+}
 
 @media (max-width: 1199.98px) {  }
 
@@ -33,6 +40,15 @@
 
 @media (min-width: 768px) {  }
 
-@media (min-width: 992px) {  }
+@media (min-width: 992px) {
+  main {
+    padding-bottom: 260px;
+  }
+  .offices {
+    .row {
+      margin-bottom: 80px;
+    }
+  }
+}
 
 @media (min-width: 1200px) {  }

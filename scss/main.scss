@@ -3,11 +3,17 @@
 @import "product";
 @import "news";
 @import "news-item";
+@import "about";
+@import "program";
+@import "certificates";
+@import "contacts";
+@import "offices";
 @import "media";
 @import "slick";
 @import "vars";
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,800&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+
 
 body {
   font-family: $open-sans;
@@ -19,6 +25,7 @@ main {
   min-height: calc(100vh - 178px);
   padding-top: 140px;
 }
+
 h1 {
   font-family: $raleway;
   font-weight: $extrabold;
@@ -84,6 +91,7 @@ textarea {
   border-radius: 30px;
   background: linear-gradient(90deg, #0085E6 0%, #61C2EF 100%);
   transition: background .3s ease;
+
   a {
     color: #FFFFFF;
     height: 100%;
@@ -102,7 +110,7 @@ textarea {
   cursor: pointer;
   padding: 12px 0;
   text-align: center;
-  color: $color-violet ;
+  color: $color-violet;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   width: 197px;
@@ -117,6 +125,7 @@ textarea {
 }
 
 //--------HEADER-----------
+
 .header-top {
   background: linear-gradient(90.23deg, rgba(97, 194, 239, 0.1) 11.07%, #61C2EF 83.3%);
 
@@ -169,38 +178,108 @@ textarea {
 
 .header-btm {
   height: 68px;
+  background-color: #FFFFFF;
 
   .container {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+  }
+
+  .logo-sm {
+    display: none;
   }
 
   .nav {
     margin-left: -15px;
+
+    .nav-link {
+      color: #222222;
+      font-weight: 600;
+    }
+
+    .nav-item {
+      position: relative;
+      padding: 14px 0;
+
+      &:hover {
+        .drop-menu {
+          visibility: visible;
+          opacity: 1;
+          z-index: 1;
+          transform: translateY(0%);
+          transition-delay: 0s, 0s, 0.3s;
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        height: 4px;
+        background: $color-blue;
+        top: calc(100% - 2px);
+        transition: all 0.2s ease-in-out;
+        right: 0;
+        width: 0;
+        z-index: 2;
+      }
+    }
+
+    .nav-item:hover:after {
+      left: 0;
+      right: auto;
+      width: 100%
+    }
+
   }
 
-  .search-btn {
+  .drop-menu {
+    padding: 30px 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 3px 8px #C4C4C4;
+    border-radius: 4px;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateY(-2em);
+    z-index: -1;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.5s, z-index 0s linear 0.01s, color 0.2s 0.5s;
+
+    ul {
+      list-style-type: none;
+      padding-left: 10px;
+      margin: 0;
+
+      a {
+        font-size: 14px;
+        line-height: 36px;
+        white-space: nowrap;
+        color: #222222;
+      }
+    }
+
+    .dropdown-item {
+      font-weight: $semibold;
+      color: #444;
+    }
+
+    &.with-columns {
+      display: flex;
+    }
+  }
+
+  .open-search {
     height: 24px;
     width: 24px;
     position: relative;
     cursor: pointer;
-
-    &:before {
-      content: '\f002';
-      font-family: $font-awesome;
-      font-weight: bold;
-      color: $color-blue;
-      font-size: 24px;
-      line-height: 24px;
-      position: absolute;
-    }
-
+    background: url("../media/search-icon.svg") no-repeat center;
     &:hover {
-      &:before {
-        color: $color-violet;
-      }
+      background: url("../media/search-icon-hover.svg") no-repeat center;
     }
 
     a {
@@ -215,6 +294,7 @@ textarea {
   color: #7F899D;
   font-size: 12px;
   margin-top: 5px;
+
   span {
     color: #2F3370;
     font-size: 12px;
@@ -266,8 +346,10 @@ textarea {
       color: #777777;
       font-size: 14px;
     }
+
   }
 }
+
 .form-btn.gradient-btn {
   display: flex;
   align-items: center;
@@ -279,10 +361,13 @@ textarea {
   padding: 39px 56px 48px 49px;
   z-index: 2;
   position: absolute;
+  right: 0;
+  top: 100%;
   max-width: 558px;
   background-color: #fff;
   box-shadow: 0 0 8px rgba(196, 196, 196, 0.5);
   border-radius: 4px;
+
   .form-btn {
     position: absolute;
     right: 15px;
@@ -302,6 +387,7 @@ textarea {
     color: #7F899D;
     font-size: 15px;
   }
+
   .form-item {
     position: relative;
     width: 360px;
@@ -309,6 +395,7 @@ textarea {
     min-height: 53px;
     text-align: center;
   }
+
   input, textarea {
     width: 100%;
     border: none;
@@ -330,16 +417,19 @@ textarea {
       color: #7F899D;
       font-size: 15px;
     }
+
     &:focus {
       border-bottom: 1px solid #0085E6;
     }
   }
+
   input[type='file'] {
     width: 24px;
     height: 30px;
     overflow: hidden;
     cursor: pointer;
     margin-left: 11px;
+
     &:before {
       width: 24px;
       height: 24px;
@@ -355,6 +445,7 @@ textarea {
       padding: 8px 0;
       text-align: center;
     }
+
     &::-webkit-file-upload-button {
       visibility: hidden;
     }
@@ -365,18 +456,22 @@ textarea {
       color: #7F899D;
       font-size: 15px;
     }
+
     &::-moz-placeholder {
       color: #7F899D;
       font-size: 15px;
     }
+
     &:-ms-input-placeholder {
       color: #7F899D;
       font-size: 15px;
     }
+
     &:focus {
       border-bottom: 1px solid #0085E6;
     }
   }
+
   label {
     color: #7F899D;
     font-size: 12px;
@@ -386,13 +481,21 @@ textarea {
     left: 0;
     transition: .2s;
   }
-  input:focus + label { opacity: 1 }
-  textarea:focus + label { opacity: 1 }
+
+  input:focus + label {
+    opacity: 1
+  }
+
+  textarea:focus + label {
+    opacity: 1
+  }
+
   .download-file {
     margin-bottom: 17px;
     margin-top: 28px;
     width: 360px;
     max-width: 70%;
+
     div {
       display: flex;
       align-items: center;
@@ -437,6 +540,24 @@ textarea {
   }
 }
 
+header.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+
+  .header-top {
+    display: none;
+  }
+
+  .header-btm {
+    .logo-sm {
+      display: block;
+    }
+  }
+}
+
 //--------FOOTER-----------
 
 footer {
@@ -468,6 +589,7 @@ footer {
   .phones {
     display: flex;
     flex-direction: column;
+
     a {
       margin: 6px 0;
 
@@ -475,6 +597,7 @@ footer {
         margin-top: 0;
       }
     }
+
     &:before {
       content: '\f879';
       font-family: $font-awesome;
@@ -488,6 +611,7 @@ footer {
 
   .mail {
     padding-left: 30px;
+
     &:before {
       content: '\f0e0';
       font-family: $font-awesome;
@@ -522,6 +646,7 @@ footer {
     height: 237px;
     bottom: 100%;
     background: url("../media/footer-backgr.png");
+
     background-position-y: 0;
     background-position-x: center
   }
@@ -535,13 +660,48 @@ footer {
 .breadcrumb {
   background-color: transparent;
   margin-bottom: 50px;
+  padding: 0;
+
   a {
     font-size: 12px;
     color: #555555;
   }
+
   .active {
     font-size: 12px;
     color: #222222;
     margin-top: 6px;
+  }
+}
+
+.error-404 {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+
+  .error-num {
+    font-family: $raleway;
+    font-weight: $extrabold;
+    font-size: 160px;
+    color: #FFFFFF;
+    text-align: center;
+  }
+
+  .error-text {
+    h6 {
+      text-transform: uppercase;
+      font-size: 24px;
+    }
+
+    max-width: 444px;
+    color: #FFFFFF;
+    font-size: 24px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  a {
+    color: $color-blue;
+    text-decoration: underline;
   }
 }
