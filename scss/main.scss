@@ -198,19 +198,32 @@ textarea {
     .nav-link {
       color: #222222;
       font-weight: 600;
+      position: relative;
     }
 
     .nav-item {
       position: relative;
       padding: 14px 0;
 
+      &.withSubmenu .nav-link:after {
+        content: url("../media/shevron.svg");
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+
       &:hover {
         .drop-menu {
+
           visibility: visible;
           opacity: 1;
           z-index: 1;
           transform: translateY(0%);
           transition-delay: 0s, 0s, 0.3s;
+        }
+
+        .nav-link {
+          color: $color-blue;
         }
       }
 
@@ -224,20 +237,22 @@ textarea {
         right: 0;
         width: 0;
         z-index: 2;
+
+        &:hover:after {
+          left: 0;
+          right: auto;
+          width: 100%
+        }
       }
     }
 
-    .nav-item:hover:after {
-      left: 0;
-      right: auto;
-      width: 100%
+    .nav-item.withSubmenu:hover .nav-link:after {
+      content: url("../media/shevron2_hover.svg");
     }
-
   }
 
   .drop-menu {
     padding: 30px 20px;
-    background-color: #FFFFFF;
     box-shadow: 0 3px 8px #C4C4C4;
     border-radius: 4px;
     visibility: hidden;
@@ -247,7 +262,8 @@ textarea {
     left: 0;
     transform: translateY(-2em);
     z-index: -1;
-    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.5s, z-index 0s linear 0.01s, color 0.2s 0.5s;
+    transition: all 0.5s ease-in-out 0s, visibility 0s linear 0.5s, z-index 0s linear 0.01s, color 0.2s 0.5s;
+    background-color: #FFFFFF;
 
     ul {
       list-style-type: none;
@@ -259,16 +275,24 @@ textarea {
         line-height: 36px;
         white-space: nowrap;
         color: #222222;
+        position: relative;
+
+        &:hover {
+          color: $color-light-blue;
+        }
       }
     }
 
     .dropdown-item {
       font-weight: $semibold;
       color: #444;
-    }
+      position: relative;
+      display: inline-block;
 
-    &.with-columns {
-      display: flex;
+      &:hover {
+        color: $color-light-blue;
+        background: #FFFFFF;
+      }
     }
   }
 
@@ -278,6 +302,7 @@ textarea {
     position: relative;
     cursor: pointer;
     background: url("../media/search-icon.svg") no-repeat center;
+
     &:hover {
       background: url("../media/search-icon-hover.svg") no-repeat center;
     }
@@ -429,25 +454,37 @@ textarea {
     overflow: hidden;
     cursor: pointer;
     margin-left: 11px;
+    position: relative;
+    border-bottom: none;
+    &::before {
+
+    }
+
+    &::-webkit-file-upload-button {
+      visibility: hidden;
+    }
+  }
+  label[for=file] {
+    width: 24px;
+    height: 30px;
+    position: static;
+    opacity: 1;
 
     &:before {
-      width: 24px;
-      height: 24px;
-      border-radius: 30px;
+      display: inline-block;
       content: '\f019';
       font-family: $font-awesome;
       font-weight: bold;
       font-size: 24px;
       line-height: 24px;
       color: $color-light-blue;
-      display: inline-block;
-      background: white;
-      padding: 8px 0;
-      text-align: center;
-    }
-
-    &::-webkit-file-upload-button {
-      visibility: hidden;
+      position: absolute;
+      left: 140px;
+      top: 5px;
+      background: #fff;
+      width: 30px;
+      height: 35px;
+      cursor: pointer;
     }
   }
 
@@ -500,6 +537,7 @@ textarea {
       display: flex;
       align-items: center;
       margin-top: 20px;
+      position: relative;
     }
 
     span {
@@ -567,6 +605,10 @@ footer {
 
   a {
     color: #FFFFFF;
+
+    &:hover {
+      color: #FFFFFF;
+    }
   }
 
   .address {
@@ -611,6 +653,7 @@ footer {
 
   .mail {
     padding-left: 30px;
+    position: relative;
 
     &:before {
       content: '\f0e0';
@@ -619,7 +662,8 @@ footer {
       color: $color-light-blue;
       font-size: 21px;
       position: absolute;
-      left: 16px;
+      left: 0;
+      top: -3px;
     }
 
   }
@@ -644,9 +688,8 @@ footer {
     position: absolute;
     width: 100%;
     height: 237px;
-    bottom: 100%;
+    bottom: calc(100% - 3px);
     background: url("../media/footer-backgr.png");
-
     background-position-y: 0;
     background-position-x: center
   }

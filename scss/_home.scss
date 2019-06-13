@@ -110,8 +110,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   -ms-grid-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(3, 1fr);
-  -ms-grid-rows: 1fr 1fr 1fr;
+  //grid-template-rows: repeat(3, 1fr);
+  //-ms-grid-rows: 1fr 1fr 1fr;
   grid-gap: 32px;
 
   .card {
@@ -127,6 +127,7 @@
     img {
       max-height: 132px;
       height: 132px;
+      max-width: 100%;
     }
 
     p {
@@ -148,7 +149,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   -ms-grid-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  //grid-template-rows: 1fr;
   grid-gap: 32px;
 
   .card {

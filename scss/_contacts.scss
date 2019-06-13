@@ -29,6 +29,10 @@
 }
   .map-wrap {
     margin-top: 71px;
+    .container {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 .contacts-col {

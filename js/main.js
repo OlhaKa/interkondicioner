@@ -58,6 +58,22 @@ $(document).ready(function () {
 
     $('.about-slider').slick({
         slidesToShow: 3,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+
+                }
+            },
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1,
+                    dots: true
+                }
+            }
+        ]
     });
 
     $(".review-thumb").fancybox({
@@ -66,21 +82,40 @@ $(document).ready(function () {
         width: "1200"
     });
     // ----------- HEADER VIEW CHANGE---------
-    changeHeaderView ();
+    changeHeaderView();
 
-    function changeHeaderView () {
+    function changeHeaderView() {
         var scroll = $(window).scrollTop();
-        if (scroll > 140 ) {
+        if (scroll > 140) {
             $('header').addClass('scrolled');
-        } else  {
+        } else {
             $('header').removeClass('scrolled');
 
         }
     }
 
     $(window).scroll(function () {
-        changeHeaderView ()
+        changeHeaderView()
     });
+
+    hideMenuArrows();
+
+    function hideMenuArrows() {
+        var menuItems = $('.header-btm .nav').children();
+        $.each(menuItems, function () {
+            if ($(this).children(".drop-menu").length) {
+                $(this).addClass('withSubmenu')
+            }
+        });
+    }
+
+    toggleDropMenu();
+
+    function toggleDropMenu() {
+        $(".withSubmenu").click(function () {
+            $(this).children(".drop-menu").toggleClass("show")
+        })
+    }
 
     var uploadField = document.getElementById("file");
     uploadField.onchange = function () {
