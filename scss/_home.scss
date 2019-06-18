@@ -123,6 +123,32 @@
     min-height: 240px;
     padding: 15px;
     text-align: center;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -16px;
+      right: -16px;
+      background: linear-gradient(90deg, #61C2EF 0%, #ABE5FF 50%);
+      height: 32px;
+      width: 32px;
+      border-radius: 32px;
+      transform: scale(1);
+      transform-origin: 50% 50%;
+      transition: transform 0.25s ease-out;
+    }
+
+    &:hover {
+      .go-corner {
+        background: transparent;
+      }
+      &:before {
+        transform: scale(28);
+      }
+    }
 
     img {
       max-height: 132px;
@@ -184,10 +210,39 @@
       margin-left: calc(100% - 30px);
       width: 30px;
       height: 30px;
-      background: url("../media/Arrow-sm.svg") no-repeat center;
+    }
+    &:hover {
+      .arrow-icon {
+        transform: translate3d(5px, 0, 0);
+      }
+
+      .arrow-icon--circle {
+        stroke-dashoffset: 0;
+      }
     }
   }
 
+  }
+.link--arrowed {
+  display: inline-block;
+  height: 2rem;
+  line-height: 2rem;
+
+  .arrow-icon {
+    position: relative;
+    top: -1px;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    vertical-align: middle;
+  }
+
+  .arrow-icon--circle {
+    transition: stroke-dashoffset .3s ease;
+    stroke-dasharray: 95;
+    stroke-dashoffset: 95;
+  }
   .card-sm {
     display: flex;
     flex-direction: row;

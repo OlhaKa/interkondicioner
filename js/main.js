@@ -95,11 +95,12 @@ $(document).ready(function () {
     }
 
     $(window).scroll(function () {
-        changeHeaderView()
+        changeHeaderView();
     });
 
-    hideMenuArrows();
 
+
+    hideMenuArrows();
     function hideMenuArrows() {
         var menuItems = $('.header-btm .nav').children();
         $.each(menuItems, function () {
@@ -109,25 +110,50 @@ $(document).ready(function () {
         });
     }
 
-    toggleDropMenu();
 
+    toggleDropMenu();
     function toggleDropMenu() {
         $(".withSubmenu").click(function () {
             $(this).children(".drop-menu").toggleClass("show")
         })
     }
 
-    var uploadField = document.getElementById("file");
-    uploadField.onchange = function () {
-        if (this.files[0].size > 10000000) {
-            $(".alert-message span").show();
-            this.value = "";
-        } else {
-            $(".alert-message span").hide();
-            $(".files-count").text(this.files.length);
-        }
-    };
+    // var uploadField = document.getElementById("file");
+    // uploadField.onchange = function () {
+    //     if (this.files[0].size > 10000000) {
+    //         $(".alert-message span").show();
+    //         this.value = "";
+    //     } else {
+    //         $(".alert-message span").hide();
+    //         $(".files-count").text(this.files.length);
+    //     }
+    // };
 
+
+    // ----------- CATALOG SIDEBAR ------------
+    hideSidebarArrows();
+    function hideSidebarArrows() {
+        var menuItems = $('.components').children();
+        $.each(menuItems, function () {
+            if ($(this).children(".drop-menu").length) {
+                $(this).addClass('withDropMenu')
+            }
+        });
+    }
+
+    toggleSidebarMenu();
+    function toggleSidebarMenu() {
+        $(".withDropMenu").click(function () {
+            $(this).children(".drop-menu").toggleClass("show");
+            $(this).toggleClass("opened")
+        })
+    }
+
+
+
+        $('.filter-btn').click(function () {
+            $('#sidebar').toggleClass('shown')
+        })
 
 });
 
