@@ -1,6 +1,5 @@
 $(document).ready(function () {
     $('.top_banner_slider').slick({
-        // autoplay: true,
         dots: true,
         infinite: true,
         speed: 500,
@@ -123,18 +122,6 @@ $(document).ready(function () {
         })
     }
 
-    // var uploadField = document.getElementById("file");
-    // uploadField.onchange = function () {
-    //     if (this.files[0].size > 10000000) {
-    //         $(".alert-message span").show();
-    //         this.value = "";
-    //     } else {
-    //         $(".alert-message span").hide();
-    //         $(".files-count").text(this.files.length);
-    //     }
-    // };
-
-
     // ----------- CATALOG SIDEBAR ------------
     hideSidebarArrows();
 
@@ -169,16 +156,26 @@ $(document).ready(function () {
         if ($(window).width() < 1200) {
             $('#location').insertBefore('ul.nav');
             $('.phones-block').insertBefore('.open-search');
-            // $('.open-search').insertAfter('.header-top-right');
             $('#ask-btn').insertAfter('ul.nav');
         } else {
             $('.phones-block').appendTo('.header-top-right');
             $('#location').insertAfter('.phones-block');
 
-            // $('.open-search').insertBefore('.stub');
             $('#ask-btn').insertAfter('.open-search');
         }
     }
 
+
+    // --- FILE UPLOAD-------
+    var uploadField = document.getElementById("file");
+    uploadField.onchange = function () {
+        if (this.files[0].size > 10000000) {
+            $(".alert-message span").show();
+            this.value = "";
+        } else {
+            $(".alert-message span").hide();
+            $(".files-count").text(this.files.length);
+        }
+    };
 });
 
