@@ -81,6 +81,7 @@ $(document).ready(function () {
         maxWidth: "100%",
         width: "1200"
     });
+
     // ----------- HEADER VIEW CHANGE---------
     changeHeaderView();
 

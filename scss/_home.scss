@@ -110,8 +110,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   -ms-grid-columns: 1fr 1fr 1fr;
-  //grid-template-rows: repeat(3, 1fr);
-  //-ms-grid-rows: 1fr 1fr 1fr;
   grid-gap: 32px;
 
   .card {
@@ -171,21 +169,25 @@
   }
 }
 
-.news-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  -ms-grid-columns: 1fr 1fr 1fr;
-  //grid-template-rows: 1fr;
-  grid-gap: 32px;
-
+.news-flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -32px;
   .card {
+    margin: 0 0 32px 32px;
+    width: calc(33.3333% - 32px);
+  }
+  .card,
+  .card-sm {
+    position: relative;
     background: #FFFFFF;
     box-shadow: 0 0 8px rgba(196, 196, 196, 0.5);
     border-radius: 4px;
     padding: 15px;
-
     p {
-      line-height: 26px;
+      line-height: 29px;
+      font-size: 18px;
+      font-weight: $semibold;
       overflow: hidden;
       display: -webkit-box;
       -webkit-line-clamp: 3;
@@ -219,29 +221,16 @@
       .arrow-icon--circle {
         stroke-dashoffset: 0;
       }
+      p {
+        color: $color-violet;
+      }
     }
-  }
 
   }
-.link--arrowed {
-  display: inline-block;
-  height: 2rem;
-  line-height: 2rem;
 
-  .arrow-icon {
-    position: relative;
-    top: -1px;
-    -webkit-transition: -webkit-transform 0.3s ease;
-    transition: -webkit-transform 0.3s ease;
-    transition: transform 0.3s ease;
-    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-    vertical-align: middle;
-  }
-
-  .arrow-icon--circle {
-    transition: stroke-dashoffset .3s ease;
-    stroke-dasharray: 95;
-    stroke-dashoffset: 95;
+  .card-column {
+    margin: 0 0 32px 32px;
+    width: calc(33.3333% - 32px);
   }
   .card-sm {
     display: flex;
@@ -268,6 +257,27 @@
       bottom: 20px;
       right: 15px;
     }
+  }
+  }
+.link--arrowed {
+  display: inline-block;
+  height: 2rem;
+  line-height: 2rem;
+
+  .arrow-icon {
+    position: relative;
+    top: -1px;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    vertical-align: middle;
+  }
+
+  .arrow-icon--circle {
+    transition: stroke-dashoffset .3s ease;
+    stroke-dasharray: 95;
+    stroke-dashoffset: 95;
   }
 }
 .news-page-link {

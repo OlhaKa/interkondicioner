@@ -1,6 +1,7 @@
 .product {
   padding-bottom: 275px;
   position: relative;
+  user-select: none;
   h1 {
     margin-bottom: 60px;
   }
@@ -73,6 +74,7 @@
       border: none;
       border-top: 4px solid transparent;
       color: #555555;
+      letter-spacing: 0.04em;
       font-size: 16px;
       text-transform: uppercase;
       font-weight: $semibold;
@@ -171,7 +173,6 @@
       border: 1px solid #0085E6;
     }
   }
-
 }
 .banner_paginator {
   display: flex;
@@ -179,17 +180,24 @@
   justify-content: flex-end;
   .prev,
   .next {
-    background: url("../media/arrow_left_default.svg") no-repeat center;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
+    cursor: pointer;
     &:hover {
-      background: url("../media/arrow_left_default_hover.svg") no-repeat center;
+      .arrow-icon {
+        transform: translate3d(5px, 0, 0);
+      }
+
+      .arrow-icon--circle {
+        stroke-dashoffset: 0;
+      }
+      p {
+        color: $color-violet;
+      }
     }
   }
-  .next {
+  .prev {
     transform: rotate(180deg);
     transform-origin: center;
-    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 2px;
   }
 }

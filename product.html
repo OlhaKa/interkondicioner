@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/fontawesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -21,14 +22,54 @@
             </ol>
         </nav>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
                 <div class="product-slider">
                     <div class="preview-slider">
-                        <div><img src="media/main-banner-img.png" alt=""></div>
-                        <div><img src="media/home-catalog/4.png" alt=""></div>
-                        <div><img src="media/main-banner-img.png" alt=""></div>
-                        <div><img src="media/home-catalog/4.png" alt=""></div>
-                        <div><img src="media/main-banner-img.png" alt=""></div>
+                        <div>
+                            <a href="media/main-banner-img.png"
+                               data-fancybox
+                               data-caption=""
+                               data-type="image"
+                               class="review-thumb">
+                                <img src="media/main-banner-img.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="media/home-catalog/4.png"
+                               data-fancybox
+                               data-caption=""
+                               data-type="image"
+                               class="review-thumb">
+                                <img src="media/home-catalog/4.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="media/main-banner-img.png"
+                               data-fancybox
+                               data-caption=""
+                               data-type="image"
+                               class="review-thumb">
+                                <img src="media/main-banner-img.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="media/home-catalog/4.png"
+                               data-fancybox
+                               data-caption=""
+                               data-type="image"
+                               class="review-thumb">
+                                <img src="media/home-catalog/4.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="media/main-banner-img.png"
+                               data-fancybox
+                               data-caption=""
+                               data-type="image"
+                               class="review-thumb">
+                                <img src="media/main-banner-img.png" alt="">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="thumb-slider">
@@ -36,14 +77,32 @@
                     <div><img src="media/home-catalog/4.png" alt=""></div>
                     <div><img src="media/main-banner-img.png" alt=""></div>
                     <div><img src="media/home-catalog/4.png" alt=""></div>
-                    <div><img src="media/main-banner -img.png" alt=""></div>
+                    <div><img src="media/main-banner-img.png" alt=""></div>
                 </div>
                 <div class="banner_paginator">
-                    <div class="prev"></div>
-                    <div class="next"></div>
+                    <div class="prev">
+                        <span class="link--arrowed">
+                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                <g fill="none" stroke="#2175FF" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
+                                    <circle class="arrow-icon--circle" cx="16" cy="16" r="15.12"></circle>
+                                    <path class="arrow-icon--arrow" d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"></path>
+                                </g>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="next">
+                        <span class="link--arrowed">
+                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                <g fill="none" stroke="#2175FF" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
+                                    <circle class="arrow-icon--circle" cx="16" cy="16" r="15.12"></circle>
+                                    <path class="arrow-icon--arrow" d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"></path>
+                                </g>
+                            </svg>
+                        </span>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-8 short-descr">
+            <div class="col-md-6 col-lg-8 short-descr">
                 <h1>Кондиционеры центральные каркасные (приточные, приточно-вытяжные установки) типа КЦК</h1>
                 <p>Проектирование, производство, продажа и монтаж кондиционеров КЦК (кондиционеры центральные каркасные, приточные, приточно-вытяжные установки) в соответствии с ТУ
                     У 29.2-24472991-020:2009.</p>
@@ -93,31 +152,137 @@
                     <table>
                         <tr>
                             <td>FansPortable</td>
-                            <td><div class="gradient-btn">
-                                <a href="" download="">Скачать</a>
-                            </div></td>
+                            <td>
+                                <div class="gradient-btn">
+                                    <a href="" download="">Скачать</a>
+                                </div>
+                            </td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>инструкция</td>
-                            <td><div class="gradient-btn">
-                                <a href="" download="">Скачать</a>
-                            </div></td>
-                            <td><div class="border-btn">
-                                <a href="" target="_blank">Посмотреть</a>
-                            </div></td>
+                            <td>
+                                <div class="gradient-btn">
+                                    <a href="" download="">Скачать</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="border-btn">
+                                    <a href="" target="_blank">Посмотреть</a>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td>обновление к БД (24.04.2019)</td>
-                            <td><div class="gradient-btn">
-                                <a href="" download="">Скачать</a>
-                            </div></td>
+                            <td>
+                                <div class="gradient-btn">
+                                    <a href="" download="">Скачать</a>
+                                </div>
+                            </td>
                             <td></td>
                         </tr>
                     </table>
                 </div>
                 <div class="tab-pane fade" id="c" role="tabpanel" aria-labelledby="c">
                     <img src="media/order-form.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="product-description-sm">
+            <div class="accordion" id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Описание
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Типы кондиционеров центральных каркасных (приточных, приточно-вытяжных установок):</h3>
+                            <p>- Кондиционеры КЦК-1,6, КЦК-3,15, КЦК-5, КЦК-6,3, КЦК-8-1, КЦК-8-2, КЦК-10, КЦК-12,5, КЦК-16, КЦК-20; КЦК-25; КЦК-31,5; КЦК-40; - Вертикальные кондиционеры
+                                КЦКВ-1,6, КЦКВ-3,15, КЦКВ-5, КЦКВ-6,3, КЦКВ-8-1, КЦКВ-8-2, КЦКВ-10; - Наружные кондиционеры КЦКЗ-1,6, КЦКЗ-3,15, КЦКЗ-5, КЦКЗ-6,3, КЦКЗ-8-1, КЦКЗ-8-2,
+                                КЦКЗ-10, КЦКЗ-12,5, КЦКЗ-16, КЦКЗ-20; КЦКЗ-25; КЦКЗ-31,5; КЦКЗ-40; - Кондиционеры для медицинских учреждений КЦКМ-1,6, КЦКМ-3,15, КЦКМ-5, КЦКМ-6,3,
+                                КЦКМ-8-1, КЦКМ-8-2, КЦКМ-10, КЦКМ-12,5, КЦКМ-16, КЦКМ-20; - Подвесные кондиционеры КЦКП-1,5, КЦКП-2, КЦКП-3, КЦКП-4, а также оборудование, из которого они
+                                состоят (дальше по тексту “кондиционеры” и “вентиляционное оборудование”) проектируются и изготавливаются для внутреннего рынка и на экспорт в страны с
+                                умеренным и тропическим климатом. </p>
+                            <p>Кондиционеры центральные каркасные (приточные, приточно-вытяжные установки) КЦК, КЦКВ, КЦКЗ, КЦКМ, КЦКП применяются в стационарных системах кондиционирования
+                                воздуха и вентиляции для общеобменной вентиляции промышленных, гражданских и жилых зданий, а также санитарно-технических и производственных целей (кроме
+                                технологических) производств химической, газовой и нефтеперерабатывающей промышленности в соответствии с требованиями СНиП 2.04.05. </p>
+                            <p>Кондиционеры (приточные, приточно-вытяжные установки) КЦКМ применяются в системах кондиционирования в зданиях и сооружениях медицинских учреждений в
+                                соответствии с требованиями ДБН В 2.2-10, а также при производстве вычислительной и электронной техники, точного машиностроения, пищевой промышленности и
+                                всех видов производств с применением “высоких технологий”.</p>
+                            <p>- Кондиционеры КЦК-1,6, КЦК-3,15, КЦК-5, КЦК-6,3, КЦК-8-1, КЦК-8-2, КЦК-10, КЦК-12,5, КЦК-16, КЦК-20; КЦК-25; КЦК-31,5; КЦК-40; - Вертикальные кондиционеры
+                                КЦКВ-1,6, КЦКВ-3,15, КЦКВ-5, КЦКВ-6,3, КЦКВ-8-1, КЦКВ-8-2, КЦКВ-10; - Наружные кондиционеры КЦКЗ-1,6, КЦКЗ-3,15, КЦКЗ-5, КЦКЗ-6,3, КЦКЗ-8-1, КЦКЗ-8-2,
+                                КЦКЗ-10, КЦКЗ-12,5, КЦКЗ-16, КЦКЗ-20; КЦКЗ-25; КЦКЗ-31,5; КЦКЗ-40; - Кондиционеры для медицинских учреждений КЦКМ-1,6, КЦКМ-3,15, КЦКМ-5, КЦКМ-6,3,
+                                КЦКМ-8-1, КЦКМ-8-2, КЦКМ-10, КЦКМ-12,5, КЦКМ-16, КЦКМ-20; - Подвесные кондиционеры КЦКП-1,5, КЦКП-2, КЦКП-3, КЦКП-4, а также оборудование, из которого они
+                                состоят (дальше по тексту “кондиционеры” и “вентиляционное оборудование”) проектируются и изготавливаются для внутреннего рынка и на экспорт в страны с
+                                умеренным и тропическим климатом. </p>
+                            <p>Кондиционеры центральные каркасные (приточные, приточно-вытяжные установки) КЦК, КЦКВ, КЦКЗ, КЦКМ, КЦКП применяются в стационарных системах кондиционирования
+                                воздуха и вентиляции для общеобменной вентиляции промышленных, гражданских и жилых зданий, а также санитарно-технических и производственных целей (кроме
+                                технологических) производств химической, газовой и нефтеперерабатывающей промышленности в соответствии с требованиями СНиП 2.04.05. </p>
+                            <p>Кондиционеры (приточные, приточно-вытяжные установки) КЦКМ применяются в системах кондиционирования в зданиях и сооружениях медицинских учреждений в
+                                соответствии с требованиями ДБН В 2.2-10, а также при производстве вычислительной и электронной техники, точного машиностроения, пищевой промышленности и
+                                всех видов производств с применением “высоких технологий”.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Технические характеристики
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            <table>
+                                <tr>
+                                    <td>FansPortable</td>
+                                    <td>Программа предназначена для DeskTop версии</td>
+                                </tr>
+                                <tr>
+                                    <td>инструкция</td>
+                                    <td>
+                                        <div class="gradient-btn">
+                                            <a href="" download="">Скачать</a>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="border-btn">
+                                            <a href="" target="_blank">Посмотреть</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>обновление к БД (24.04.2019)</td>
+                                    <td>
+                                        <div class="gradient-btn">
+                                            <a href="" download="">Скачать</a>
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Форма оформления заказа
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            <img src="media/order-form.png" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -172,6 +337,7 @@
 </footer>
 
 <script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
 <script src="../js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/slick.min.js"></script>
