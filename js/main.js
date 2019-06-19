@@ -58,6 +58,8 @@ $(document).ready(function () {
 
     $('.about-slider').slick({
         slidesToShow: 3,
+        prevArrow: $('.about-slider-arrows .prev'),
+        nextArrow: $('.about-slider-arrows .next'),
         responsive: [
             {
                 breakpoint: 992,
@@ -70,7 +72,8 @@ $(document).ready(function () {
                 breakpoint: 575,
                 settings: {
                     slidesToShow: 1,
-                    dots: true
+                    dots: true,
+                    arrows: false,
                 }
             }
         ]

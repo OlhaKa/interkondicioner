@@ -72,7 +72,40 @@
 }
 
 .about-slider {
+  margin-top: 48px;
   .slick-slide {
     padding: 0 15px;
+  }
+  .slick-dots {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 0;
+    li {
+      display: inline-block;
+      margin: 0 10px;
+      &.slick-active {
+        button {
+          background: $color-blue;
+        }
+      }
+      button {
+        border: none;
+        width: 4px;
+        height: 4px;
+        background: $color-light-blue;
+        font-size: 0;
+        padding: 0;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.history {
+  img {
+    margin-top: 30px;
   }
 }

@@ -42,6 +42,21 @@
   main {
     padding-bottom: 64px;
   }
+  .about-slider-arrows {
+    display: none;
+  }
+  body .program {
+    h1 {
+      margin-bottom: 44px;
+    }
+    .program-descr-wrap {
+      padding: 35px 15px 40px;
+    }
+    h2 {
+      margin-bottom: 30px;
+    }
+  }
+
 }
 
 
@@ -75,9 +90,6 @@
       font-size: 16px;
       line-height: 24px;
     }
-  }
-  .program-descr-wrap {
-    margin-bottom: 48px;
   }
   .catalog-grid {
     grid-template-columns: 1fr 1fr;
@@ -236,6 +248,11 @@
   .news-img {
     img {
       height: 224px;
+    }
+  }
+  .program {
+    h1 {
+      margin-bottom: 48px;
     }
   }
 }
