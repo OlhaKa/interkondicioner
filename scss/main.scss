@@ -129,7 +129,7 @@ textarea {
 .header-top {
   background: linear-gradient(90.23deg, rgba(97, 194, 239, 0.1) 11.07%, #61C2EF 83.3%);
 
-  .phones-sm {
+  .phones-block {
     display: flex;
     margin-right: 15px;
 
@@ -188,6 +188,10 @@ textarea {
     position: relative;
   }
 
+  .logo {
+    display: none;
+  }
+
   .logo-sm {
     display: none;
   }
@@ -199,6 +203,7 @@ textarea {
       color: #222222;
       font-weight: 600;
       position: relative;
+      cursor: pointer;
     }
 
     .nav-item {
@@ -587,12 +592,6 @@ header.scrolled {
 
   .header-top {
     display: none;
-  }
-
-  .header-btm {
-    .logo-sm {
-      display: block;
-    }
   }
 }
 

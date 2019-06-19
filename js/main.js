@@ -148,18 +148,37 @@ $(document).ready(function () {
     }
 
     toggleSidebarMenu();
-
     function toggleSidebarMenu() {
         $(".withDropMenu").click(function () {
             $(this).children(".drop-menu").toggleClass("show");
             $(this).toggleClass("opened")
         })
-    }
+    };
 
 
     $('.filter-btn').click(function () {
         $('#sidebar').toggleClass('shown')
-    })
+    });
+
+    $(window).on("load resize",function(e){
+        insertHeaderTop ();
+    });
+
+
+    function insertHeaderTop() {
+        if ($(window).width() < 1200) {
+            $('#location').insertBefore('ul.nav');
+            $('.phones-block').insertBefore('.open-search');
+            // $('.open-search').insertAfter('.header-top-right');
+            $('#ask-btn').insertAfter('ul.nav');
+        } else {
+            $('.phones-block').appendTo('.header-top-right');
+            $('#location').insertAfter('.phones-block');
+
+            // $('.open-search').insertBefore('.stub');
+            $('#ask-btn').insertAfter('.open-search');
+        }
+    }
 
 });
 

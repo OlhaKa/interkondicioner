@@ -245,7 +245,7 @@
       min-width: 92px;
       min-height: 92px;
       margin-bottom: 0;
-      margin-right: 4px;
+      margin-right: 14px;
     }
 
     &:first-child {
@@ -259,6 +259,13 @@
     }
   }
   }
+@-moz-document url-prefix() {
+  .news-flex .card-sm p,
+  .news-flex .card p {
+    max-height: 87px;
+    overflow: hidden;
+  }
+}
 .link--arrowed {
   display: inline-block;
   height: 2rem;
