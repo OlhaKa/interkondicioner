@@ -182,6 +182,14 @@
       display: block;
     }
   }
+  header {
+    .header-btm .drop-menu ul a {
+      white-space: normal;
+    }
+    .dropdown-item {
+      white-space: normal;
+    }
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -292,17 +300,16 @@
       position: fixed;
       overflow-y: auto;
       top: 0;
-      max-height: 100vh;
+      bottom: 0;
       right: 0;
       z-index: 10;
+      background-color: #FFFFFF;
+      box-shadow: 0px 0px 8px #C4C4C4;
+      border-radius: 4px;
 
       .nav {
-        max-height: 100%;
-        overflow-y: auto;
         flex-direction: column;
-        background: #FFFFFF;
-        box-shadow: 0px 0px 8px #C4C4C4;
-        border-radius: 4px;
+       
       }
 
     }
@@ -359,6 +366,15 @@
       }
     }
   }
+  header{
+    .location {
+      margin-left: 20px;
+      margin-top: 23px;
+      a.active {
+      color: $color-blue;
+      }
+    }
+  }
 }
 
 
@@ -397,6 +413,67 @@
       &.with-columns {
         display: flex;
       }
+    }
+    .nav {
+      margin-left: -15px;
+    }
+    .nav-item {
+      position: relative;
+      padding: 14px 0;
+
+      &.withSubmenu .nav-link:after {
+        content: url("../media/shevron.svg");
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+
+      &:hover {
+        .drop-menu {
+
+          visibility: visible;
+          opacity: 1;
+          z-index: 1;
+          transform: translateY(0%);
+          transition-delay: 0s, 0s, 0.3s;
+        }
+
+        .nav-link {
+          color: $color-blue;
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        height: 4px;
+        background: $color-blue;
+        top: calc(100% - 2px);
+        transition: all 0.2s ease-in-out;
+        right: 0;
+        width: 0;
+        z-index: 2;
+
+        &:hover:after {
+          left: 0;
+          right: auto;
+          width: 100%
+        }
+      }
+    }
+    .drop-menu {
+      padding: 30px 20px;
+      box-shadow: 0 3px 8px #C4C4C4;
+      border-radius: 4px;
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      transform: translateY(-2em);
+      z-index: -1;
+      transition: all 0.5s ease-in-out 0s, visibility 0s linear 0.5s, z-index 0s linear 0.01s, color 0.2s 0.5s;
+      background-color: #FFFFFF;
     }
   }
   header.scrolled .header-btm {
