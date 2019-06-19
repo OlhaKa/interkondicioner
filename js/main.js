@@ -100,8 +100,8 @@ $(document).ready(function () {
     });
 
 
-
     hideMenuArrows();
+
     function hideMenuArrows() {
         var menuItems = $('.header-btm .nav').children();
         $.each(menuItems, function () {
@@ -113,6 +113,7 @@ $(document).ready(function () {
 
 
     toggleDropMenu();
+
     function toggleDropMenu() {
         $(".withSubmenu").click(function () {
             $(this).children(".drop-menu").toggleClass("show")
@@ -133,6 +134,7 @@ $(document).ready(function () {
 
     // ----------- CATALOG SIDEBAR ------------
     hideSidebarArrows();
+
     function hideSidebarArrows() {
         var menuItems = $('.components').children();
         $.each(menuItems, function () {
@@ -143,6 +145,7 @@ $(document).ready(function () {
     }
 
     toggleSidebarMenu();
+
     function toggleSidebarMenu() {
         $(".withDropMenu").click(function () {
             $(this).children(".drop-menu").toggleClass("show");
@@ -151,10 +154,9 @@ $(document).ready(function () {
     }
 
 
-
-        $('.filter-btn').click(function () {
-            $('#sidebar').toggleClass('shown')
-        })
+    $('.filter-btn').click(function () {
+        $('#sidebar').toggleClass('shown')
+    })
 
 });
 
