@@ -115,9 +115,9 @@ $(document).ready(function () {
 
 
     toggleDropMenu();
-
     function toggleDropMenu() {
         $(".withSubmenu").click(function () {
+            $(this).children(".nav-link").toggleClass("active");
             $(this).children(".drop-menu").toggleClass("show")
         })
     }
@@ -153,7 +153,7 @@ $(document).ready(function () {
 
 
     function insertHeaderTop() {
-        if ($(window).width() < 1200) {
+        if ($(window).width() <= 1180) {
             $('#location').insertBefore('ul.nav');
             $('.phones-block').insertBefore('.open-search');
             $('#ask-btn').insertAfter('ul.nav');

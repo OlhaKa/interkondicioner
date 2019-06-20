@@ -309,7 +309,20 @@
 
       .nav {
         flex-direction: column;
-       
+        .nav-item {
+            .nav-link {
+              border-left: 4px solid #FFFFFF;
+              &:after {
+                right: 30px;
+              }
+              &.active{
+                border-left: 4px solid $color-light-blue;
+                &:after {
+                  content: url("../media/shevron2_hover.svg");
+                }
+              }
+            }
+        }
       }
 
     }
@@ -319,6 +332,14 @@
       height: 0;
       overflow: hidden;
       padding: 0;
+      margin-left: 37px;
+      ul {
+        height: 0;
+        overflow: hidden;
+        &.opened {
+          height: auto;
+        }
+      }
 
       &.with-columns {
         flex-direction: column;
@@ -336,7 +357,10 @@
       order: 3;
     }
   }
-
+  .form-btn.gradient-btn {
+    margin-top: 35px;
+    margin-left: 19px;
+  }
   .header-top {
     display: none;
   }
@@ -370,6 +394,7 @@
     .location {
       margin-left: 20px;
       margin-top: 23px;
+      margin: 20px 0 20px 20px;
       a.active {
       color: $color-blue;
       }
@@ -421,16 +446,12 @@
       position: relative;
       padding: 14px 0;
 
-      &.withSubmenu .nav-link:after {
-        content: url("../media/shevron.svg");
-        position: absolute;
-        top: 5px;
-        right: 5px;
+      &.withSubmenu:hover .nav-link:after {
+        content: url("../media/shevron2_hover.svg") !important;
       }
 
       &:hover {
         .drop-menu {
-
           visibility: visible;
           opacity: 1;
           z-index: 1;
@@ -480,6 +501,9 @@
     .logo-sm {
       display: block;
     }
+  }
+  .close-menu-btn {
+    display: none;
   }
 }
 

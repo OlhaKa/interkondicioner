@@ -135,23 +135,6 @@ button {
 .header-top {
   background: linear-gradient(90.23deg, rgba(97, 194, 239, 0.1) 11.07%, #61C2EF 83.3%);
 
-  .phones-block {
-    display: flex;
-    margin-right: 15px;
-
-    a {
-      margin-right: 25px;
-    }
-
-    &:before {
-      content: '\f879';
-      font-weight: bold;
-      font-family: $font-awesome;
-      display: inline-block;
-      color: $color-blue;
-    }
-  }
-
   .logo-sm {
     display: none;
   }
@@ -164,9 +147,36 @@ button {
   }
 }
 
+.phones-block {
+  display: flex;
+  margin-right: 15px;
+
+  a {
+    margin-right: 25px;
+  }
+
+  &:before {
+    content: '\f879';
+    font-weight: bold;
+    font-family: $font-awesome;
+    display: inline-block;
+    color: $color-blue;
+  }
+}
+.navbar-toggler {
+  border: none;
+  width: 30px;
+  height: 22px;
+  padding: 0;
+  img {
+    max-width: 100%;
+  }
+}
+
 .header-top-right {
   display: flex;
   align-items: center;
+
 }
 
 .location {
@@ -208,18 +218,22 @@ button {
       font-weight: 600;
       position: relative;
       cursor: pointer;
+      display: inline-block;
+      padding-right: 0;
+      margin-right: 16px;
     }
 
-    
 
-    .nav-item.withSubmenu:hover .nav-link:after {
-      content: url("../media/shevron2_hover.svg");
+    .nav-item.withSubmenu .nav-link:after {
+      content: url("../media/shevron.svg");
+      position: absolute;
+      top: 5px;
+      right: -13px;
     }
+
   }
 
   .drop-menu {
-   
-
     ul {
       list-style-type: none;
       padding-left: 10px;
@@ -243,7 +257,7 @@ button {
       color: #444;
       position: relative;
       display: inline-block;
-
+      padding-left: 0;
       &:hover {
         color: $color-light-blue;
         background: #FFFFFF;
