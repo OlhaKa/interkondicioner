@@ -151,7 +151,7 @@ button {
   display: flex;
   margin-right: 15px;
 
-  a {
+  &>a:first-child {
     margin-right: 25px;
   }
 
@@ -176,7 +176,58 @@ button {
 .header-top-right {
   display: flex;
   align-items: center;
-
+  .phones-block {
+    position: relative;
+  }
+  .more_btn {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    background: url(../media/shevron.svg) no-repeat center;
+  }
+  .phones-popup {
+    padding: 25px 36px;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: -50px;
+    font-size: 15px;
+    max-width: 338px;
+    background: $color-violet;
+    border-radius: 4px;
+    color: #C4C4C4;
+    z-index: 10;
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      font-size: 15px;
+      color: #FFFFFF;
+      line-height: 31px;
+    }
+    .border-line {
+      border-top: 1px solid #61C2EF;
+      margin: 20px -36px 30px;
+    }
+    .phones-header {
+      margin-bottom: 10px;
+    }
+    span {
+      font-size: 12px;
+      line-height: 18px;
+    }
+    .popup-arrow {
+      position: absolute;
+      top: -7px;
+      left: calc(50% - 3px);
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 7px solid #2F3370;
+      width: 0;
+      height: 0;
+    }
+  }
 }
 
 .location {
@@ -437,9 +488,6 @@ button {
     margin-left: 11px;
     position: relative;
     border-bottom: none;
-    &::before {
-
-    }
 
     &::-webkit-file-upload-button {
       visibility: hidden;
@@ -448,7 +496,9 @@ button {
   label[for=file] {
     width: 24px;
     height: 30px;
-    position: static;
+    position: relative;
+    margin-bottom: -15px;
+    margin-left: -28px;
     opacity: 1;
 
     &:before {
@@ -460,7 +510,6 @@ button {
       line-height: 24px;
       color: $color-light-blue;
       position: absolute;
-      left: 140px;
       top: 5px;
       background: #fff;
       width: 30px;

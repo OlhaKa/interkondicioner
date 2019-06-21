@@ -6,6 +6,14 @@ $(document).ready(function () {
         cssEase: 'ease-in-out',
         prevArrow: $('.prev_btn'),
         nextArrow: $('.next_btn'),
+        responsive: [
+            {
+                breakpoint: 575,
+                settings: {
+                    dots: false
+                }
+            }
+        ]
     });
 
     $(".search-btn").click(function () {
@@ -14,6 +22,10 @@ $(document).ready(function () {
 
     $(".form-btn").click(function () {
         $(".contact-form").slideToggle();
+        $(".contact-form form").trigger("reset");
+        $("#file").val("");
+        $(".files-count").text('0');
+
     });
 
     $(".current-year").text((new Date).getFullYear());
@@ -115,6 +127,7 @@ $(document).ready(function () {
 
 
     toggleDropMenu();
+
     function toggleDropMenu() {
         $(".withSubmenu").click(function () {
             $(this).children(".nav-link").toggleClass("active");
@@ -135,6 +148,7 @@ $(document).ready(function () {
     }
 
     toggleSidebarMenu();
+
     function toggleSidebarMenu() {
         $(".withDropMenu").click(function () {
             $(this).children(".drop-menu").toggleClass("show");
@@ -147,8 +161,8 @@ $(document).ready(function () {
         $('#sidebar').toggleClass('shown')
     });
 
-    $(window).on("load resize",function(e){
-        insertHeaderTop ();
+    $(window).on("load resize", function (e) {
+        insertHeaderTop();
     });
 
 
