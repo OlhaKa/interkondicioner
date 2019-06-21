@@ -16,8 +16,27 @@ $(document).ready(function () {
         ]
     });
 
+
+    function closeOnClickOutside(blockName) {
+        $('body').on('click',function(event){
+            if(!$(event.target).is(blockName) &&
+                !$(event.target).is(".open_btn")){
+                $(blockName).slideUp();
+            }
+        });
+        $(window).on('scroll',function(){
+            $(blockName).slideUp();
+        })
+    }
+    closeOnClickOutside(".contact-form");
+    closeOnClickOutside(".phones-popup");
+
     $(".search-btn").click(function () {
         $(".search-wrap").slideToggle();
+    });
+
+    $(".more_btn").click(function () {
+        $(".phones-popup").slideToggle();
     });
 
     $(".form-btn").click(function () {
@@ -163,19 +182,37 @@ $(document).ready(function () {
 
     $(window).on("load resize", function (e) {
         insertHeaderTop();
+        changeMobHeader();
+        checkSubmenu()
     });
-
+    
+    
+    function checkSubmenu() {
+        if ($('.dropdown-item').next('ul').length) {
+            $('.dropdown-item')
+                .addClass('subHeader')
+                .after('<span class="openSubmenu"></span>')
+        }
+    }
 
     function insertHeaderTop() {
         if ($(window).width() <= 1180) {
             $('#location').insertBefore('ul.nav');
             $('.phones-block').insertBefore('.open-search');
-            $('#ask-btn').insertAfter('ul.nav');
+            $('#tel_num2').prependTo('.main-phones')
+
         } else {
             $('.phones-block').appendTo('.header-top-right');
             $('#location').insertAfter('.phones-block');
+            $('#tel_num2').appendTo('.priority-phones')
+        }
+    }
 
-            $('#ask-btn').insertAfter('.open-search');
+    function changeMobHeader() {
+        if ($(window).width() <= 974) {
+            $('#tel_num1').prependTo('.main-phones')
+        } else {
+            $('#tel_num1').appendTo('.priority-phones')
         }
     }
 

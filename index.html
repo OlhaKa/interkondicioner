@@ -21,12 +21,14 @@
             <div class="logo-sm"><img src="media/logo-sm.svg" alt=""></div>
             <div class="header-top-right">
                 <div class="phones-block">
-                    <a href="tel:+380577780644">+38 (057) 778 06 44</a>
-                    <a href="tel:+380577780645">+38 (057) 778 06 45</a>
-                    <div class="more_btn"></div>
+                    <ul class="priority-phones">
+                            <li id="tel_num1"><a href="tel:+380577780644">+38 (057) 778 06 44</a></li>
+                            <li id="tel_num2"><a href="tel:+380577780645">+38 (057) 778 06 45</a></li>
+                    </ul>
+                    <div class="more_btn open_btn"></div>
                     <div class="phones-popup">
                         <div class="popup-arrow"></div>
-                        <ul>
+                        <ul class="main-phones">
                             <li><a href="tel:+380577780646">+38 (057) 778 06 46</a></li>
                             <li><a href="tel:+380577780639">+38 (057) 778 06 39</a></li>
                         </ul>
@@ -141,14 +143,15 @@
                             <div class="drop-menu">
                                 <a class="dropdown-item" href="contacts.html">Главный офис</a>
                                 <a class="dropdown-item" href="offices.html">Представительства</a>
-
                             </div>
                         </li>
                     </ul>
                 </div>
             </nav>
             <div class="search-btn open-search"></div>
-            <div class="form-btn gradient-btn" id="ask-btn">ЗАДАТЬ ВОПРОС</div>
+            <div class="form-btn gradient-btn open_btn" id="ask-btn">
+                <span class="open_btn">ЗАДАТЬ ВОПРОС</span>
+            </div>
             <div class="contact-form">
                 <p>Вы можете задать вопрос, заполнив форму, и наши менеджеры ответят вам в самое ближайшее время!</p>
                 <span class="form-btn">
