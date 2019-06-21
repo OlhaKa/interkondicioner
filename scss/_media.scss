@@ -394,12 +394,7 @@
       margin-left: 37px;
 
       ul {
-        height: 0;
-        overflow: hidden;
-
-        &.opened {
-          height: auto;
-        }
+        display: none;
       }
 
       &.with-columns {
@@ -409,6 +404,7 @@
       &.show {
         height: auto;
       }
+
       .dropdown-item {
         display: table;
         width: auto;
@@ -431,6 +427,11 @@
     display: inline-block;
     margin-bottom: -8px;
     margin-left: 5px;
+    cursor: pointer;
+  }
+
+  .menu-column {
+
   }
 
   .header-top {
@@ -506,6 +507,9 @@
 }
 
 @media (min-width: 1200px) {
+  .openSubmenu {
+    display: none;
+  }
   header .header-btm {
     .drop-menu {
 
@@ -574,21 +578,24 @@
       background-color: #FFFFFF;
 
 
-        ul li {
-          border-left: 4px solid #FFFFFF;
-          padding-left: 30px;
-          margin-left: -10px;
-          &:hover {
-            border-left: 4px solid $color-light-blue;
-          }
+      ul li {
+        border-left: 4px solid #FFFFFF;
+        padding-left: 30px;
+        margin-left: -10px;
+
+        &:hover {
+          border-left: 4px solid $color-light-blue;
         }
-        .dropdown-item {
-          padding-left: 16px;
-          border-left: 4px solid #FFFFFF;
-          &:hover {
-            border-left: 4px solid $color-light-blue;
-          }
+      }
+
+      .dropdown-item {
+        padding-left: 16px;
+        border-left: 4px solid #FFFFFF;
+
+        &:hover {
+          border-left: 4px solid $color-light-blue;
         }
+      }
 
       .menu-column:last-child {
         ul li {
@@ -596,15 +603,18 @@
           padding-right: 30px;
           padding-left: 15px;
           border-left: none;
+
           &:hover {
             border-right: 4px solid $color-light-blue;
           }
         }
+
         .dropdown-item {
           padding-right: 16px !important;
           border-right: 4px solid #FFFFFF;
           border-left: none;
           padding-left: 0;
+
           &:hover {
             border-right: 4px solid $color-light-blue;
           }

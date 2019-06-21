@@ -35,8 +35,12 @@ $(document).ready(function () {
         $(".search-wrap").slideToggle();
     });
 
-    $(".more_btn").click(function () {
-        $(".phones-popup").slideToggle();
+    $(".search-btn").click(function () {
+        $(".search-wrap").slideToggle();
+    });
+
+    $(".openSubmenu").click(function () {
+        $(this).next('ul').slideToggle();
     });
 
     $(".form-btn").click(function () {
@@ -148,9 +152,9 @@ $(document).ready(function () {
     toggleDropMenu();
 
     function toggleDropMenu() {
-        $(".withSubmenu").click(function () {
-            $(this).children(".nav-link").toggleClass("active");
-            $(this).children(".drop-menu").toggleClass("show")
+        $(".withSubmenu .nav-link").click(function () {
+            $(this).toggleClass("active");
+            $(this).next(".drop-menu").toggleClass("show")
         })
     }
 
@@ -188,12 +192,12 @@ $(document).ready(function () {
     
     
     function checkSubmenu() {
-        if ($('.dropdown-item').next('ul').length) {
-            $('.dropdown-item')
-                .addClass('subHeader')
-                .after('<span class="openSubmenu"></span>')
-        }
-    }
+        $('.openSubmenu').each(function() {
+            if ($(this).next('ul').length < 1) {
+                $(this).hide()
+            }
+        })
+    };
 
     function insertHeaderTop() {
         if ($(window).width() <= 1180) {
