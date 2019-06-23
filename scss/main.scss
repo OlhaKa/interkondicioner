@@ -96,7 +96,26 @@ button {
   height: 48px;
   border-radius: 30px;
   background: linear-gradient(90deg, #0085E6 0%, #61C2EF 100%);
-  transition: background .3s ease;
+  position: relative;
+  z-index: 1;
+  &:before {
+    border-radius: inherit;
+    background-image: linear-gradient(90deg, #0085E6 0%, #2F3370 100%);
+    content: '';    
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: -100;
+    transition: opacity .2s;
+  }
+
+  &:hover:before {
+    opacity: 1;
+  }
 
   a {
     color: #FFFFFF;
@@ -107,9 +126,6 @@ button {
     border-radius: 30px;
   }
 
-  &:hover {
-    background: linear-gradient(90deg, #0085E6 0%, #2F3370 100%);
-  }
 }
 
 .border-btn {
@@ -606,18 +622,33 @@ button {
   }
 }
 
-header.scrolled {
+header {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: position 10s;
+  -ms-transition: position 10s;
+  -o-transition: position 10s;
+  transition: all 0.2s ease;
+&.scrolled {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 5;
   width: 100%;
+  animation: smoothScroll 0.3s forwards;
 
   .header-top {
     display: none;
   }
 }
-
+}
+@keyframes smoothScroll {
+	0% {
+		transform: translateY(-40px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
 //--------FOOTER-----------
 
 footer {

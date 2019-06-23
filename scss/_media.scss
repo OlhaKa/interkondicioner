@@ -300,7 +300,7 @@
     }
   }
   .header-btm {
-    .form-btn.gradient-btn {
+    #ask-btn {
       span {
         display: none;
       }
@@ -313,6 +313,7 @@
 
       &:after {
         content: '\f059';
+        line-height: 30px;
         font-family: $font-awesome;
         color: $color-violet;
         font-size: 28px;
@@ -408,6 +409,7 @@
       .dropdown-item {
         display: table;
         width: auto;
+        margin-right: 45px;
       }
     }
 
@@ -421,17 +423,16 @@
   }
 
   .openSubmenu {
-    width: 25px;
+    width: 45px;
     height: 25px;
     background: url("../media/shevron.svg") no-repeat center;
     display: inline-block;
-    margin-bottom: -8px;
-    margin-left: 5px;
     cursor: pointer;
-  }
-
-  .menu-column {
-
+    float: right;
+    margin-top: -27px;
+    &.opened {
+      background: url("../media/shevron2_hover.svg") no-repeat center;
+    }
   }
 
   .header-top {
@@ -469,7 +470,7 @@
       margin-left: 20px;
       margin-top: 23px;
       margin: 20px 0 20px 20px;
-
+      color: #F5F5F5;
       a.active {
         color: $color-blue;
       }
