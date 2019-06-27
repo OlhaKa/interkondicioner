@@ -1,3 +1,19 @@
+@media (max-width: 320px) {
+  header .contact-form {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    top: 68px;
+    overflow: auto;
+    height: auto;
+
+    .form-item,
+    .download-file {
+      width: 100%;
+    }
+  }
+}
+
 @media (max-width: 575.98px) {
   body h1 {
     font-size: 20px !important;
@@ -75,6 +91,12 @@
 
   .top_banner_slider_arrowsBox {
     display: none;
+  }
+  .top_banner_slider .banner {
+    height: 360px !important;
+  }
+  header .contact-form {
+    padding: 45px 10px 20px 10px;
   }
 }
 
@@ -197,6 +219,12 @@
       white-space: normal;
     }
   }
+  .home-catalog {
+    padding: 60px 15px;
+    h1 {
+      margin-bottom: 43px;
+    }
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -312,15 +340,11 @@
       margin-right: 15px;
 
       &:after {
-        content: '\f059';
-        line-height: 30px;
-        font-family: $font-awesome;
-        color: $color-violet;
-        font-size: 28px;
-
-        &:hover {
-          background: $color-blue;
-        }
+        content: url("../media/question.svg");
+        position: absolute;
+        display: inline-block;
+        top: 3px;
+        cursor: pointer;
       }
     }
   }
@@ -342,7 +366,7 @@
     }
   }
   .header-btm .open-search {
-    margin-right: 15px;
+    margin-right: 20px;
   }
   header .phones-popup {
     right: -150px;
@@ -430,6 +454,7 @@
     cursor: pointer;
     float: right;
     margin-top: -27px;
+
     &.opened {
       background: url("../media/shevron2_hover.svg") no-repeat center;
     }
@@ -471,9 +496,15 @@
       margin-top: 23px;
       margin: 20px 0 20px 20px;
       color: #F5F5F5;
+
       a.active {
         color: $color-blue;
       }
+    }
+  }
+  body .top_banner_slider {
+    .banner {
+      height: calc(100vh - 67px);
     }
   }
 }
@@ -635,6 +666,11 @@
   .priority-phones {
     li:first-child {
       margin-right: 25px;
+    }
+  }
+  body .top_banner_slider {
+    .banner {
+      height: calc(100vh - 132px);
     }
   }
 }

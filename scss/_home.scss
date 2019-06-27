@@ -1,15 +1,19 @@
 @import "vars";
 
+.section1 .slick-slider .slick-list {
+  transform:rotate(180deg);
+}
+
+
 
 .section1 .slick-initialized .slick-slide {
   display: flex;
+  transform:rotate(180deg);
 }
 
 .top_banner_slider {
   .banner {
-    //background-color: #B8E9FF;
-    height: calc(100vh - 72px);
-background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     h1 {
@@ -37,7 +41,7 @@ background-repeat: no-repeat;
   .slick-dots {
     list-style: none;
     position: absolute;
-    right: 9px;
+    left: 10px;
     top: 30px;
     text-align: right;
     padding: 0;
@@ -70,7 +74,7 @@ background-repeat: no-repeat;
 
 .top_banner_slider_arrowsBox {
   position: absolute;
-  right: 10px;
+  left: 10px;
   bottom: 0;
 
   .prev_btn,

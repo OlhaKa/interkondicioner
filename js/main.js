@@ -6,15 +6,19 @@ $(document).ready(function () {
         cssEase: 'ease-in-out',
         prevArrow: $('.prev_btn'),
         nextArrow: $('.next_btn'),
+        vertical: true,
+        autoplay: true,
         responsive: [
             {
                 breakpoint: 575,
                 settings: {
-                    dots: false
+                    dots: false,
+                    vertical: false,
                 }
             }
         ]
     });
+
 
     // document.addEventListener('click', closeMenuOnClickOutside);
     // function closeMenuOnClickOutside(evt) {
