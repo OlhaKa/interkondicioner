@@ -136,6 +136,7 @@ $(document).ready(function () {
         ]
     });
     $('[data-fancybox="aboutGallery"]').fancybox();
+    $('[data-fancybox="newsGallery"]').fancybox();
     $('[data-fancybox="docs"]').fancybox();
 
     // ----------- HEADER VIEW CHANGE---------
