@@ -73,8 +73,18 @@
 
 .about-slider {
   margin-top: 48px;
+  .slick-track {
+    display: flex;
+  }
   .slick-slide {
     padding: 0 15px;
+    min-height: 100%;
+    height: auto;
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
   }
   .slick-dots {
     list-style-type: none;

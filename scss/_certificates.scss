@@ -16,8 +16,11 @@
     padding: 19px 15px 17px;
     display: flex;
     flex-direction: row;
+    a {
+      height: max-content;
+    }
     img {
-      max-height: 328px;
+      max-width: 243px;
     }
   }
   p {
@@ -27,7 +30,5 @@
     line-height: 27px;
     margin-left: 16px;
   }
-  .review-thumb {
-    cursor: pointer;
-  }
+
 }

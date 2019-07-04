@@ -23,7 +23,7 @@ body {
 
 main {
   min-height: calc(100vh - 178px);
-  padding-top: 15px;
+  //padding-top: 15px;
 }
 
 h1 {
@@ -387,6 +387,10 @@ button {
   align-items: center;
   justify-content: center;
   height: 100%;
+
+  .search-btn {
+    cursor: pointer;
+  }
 
   .search-btn:before {
     display: none;
@@ -756,7 +760,7 @@ footer {
 .breadcrumb {
   background-color: transparent;
   margin-bottom: 50px;
-  padding: 0;
+  padding: 13px 0 0 0;
 
   a {
     font-size: 12px;
@@ -821,6 +825,6 @@ footer {
   margin-top: -4px;
   margin-right: -4px;
   color: white;
-  font-family: courier, sans;
+  font-family: sans-serif;
 }
 

@@ -15,6 +15,21 @@
 }
 
 @media (max-width: 575.98px) {
+  .program {
+    h1 {
+      padding-top: 26px;
+    }
+  }
+  .news-item {
+    h1 {
+      padding-top: 26px;
+    }
+  }
+  .news {
+    h1 {
+      padding-top: 26px;
+    }
+  }
   body h1 {
     font-size: 20px !important;
     line-height: 23px !important;
@@ -228,6 +243,11 @@
 }
 
 @media (max-width: 991.98px) {
+  .news-item {
+    h1 {
+      padding-top: 55px;
+    }
+  }
   main {
     h1 {
       font-size: 30px;
@@ -370,6 +390,16 @@
   }
   header .phones-popup {
     right: -150px;
+  }
+  .news {
+    h1 {
+      padding-top: 43px;
+    }
+  }
+  .program {
+    h1 {
+      padding-top: 43px;
+    }
   }
 }
 
@@ -523,6 +553,11 @@
 }
 
 @media (min-width: 992px) {
+  .news-item {
+    h1 {
+      padding-top: 87px;
+    }
+  }
   .offices {
     .row {
       margin-bottom: 80px;
@@ -534,6 +569,16 @@
   .news-item {
     .gradient-btn {
       margin-top: 65px;
+    }
+  }
+  .news {
+    h1 {
+      padding-top: 90px;
+    }
+  }
+  .program {
+    h1 {
+      padding-top: 70px;
     }
   }
 }
