@@ -30,13 +30,16 @@
   list-style-type: none;
   &>li {
     min-height: 60px;
-    border-left: 4px solid #FFFFFF;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 9px 34px 9px 12px;
+    padding: 0 34px 0 0;
+    & > a {
+      border-left: 4px solid #FFFFFF;
+    }
+
     &.withDropMenu:after {
       content: url(../media/shevron.svg);
       position: absolute;
@@ -46,9 +49,9 @@
     }
     &:hover {
       background: #F9F9F9;
-      border-left: 4px solid $color-blue;
-      a {
-        color: $color-blue;
+      & > a {
+        //color: $color-blue;
+        border-left: 4px solid $color-blue;
       }
     }
     &.withDropMenu.opened:after {
@@ -61,10 +64,10 @@
       position: relative;
       display: flex;
       align-items: center;
-      min-height: 42px;
       width: available;
       width: -moz-available;
       width: -webkit-fill-available;
+
       &:after {
         content: '';
         position: absolute;
@@ -76,18 +79,25 @@
         opacity: 0.2;
       }
     }
+    &.opened {
+      background-color: #eeeeee;
+      & > a {
+        border-left: 4px solid $color-blue;
+        color: $color-blue;
+      }
+    }
   }
-
   .drop-menu {
-    padding: 10px 0;
+    padding: 0;
     display: none;
     li  {
       min-height: 54px;
       display: flex;
       align-items: center;
-      margin: 0 -34px 0 -16px;
+      margin-right: -34px;
       padding: 0 34px 0 16px;
-      &:hover {
+      &:hover,
+      &.activeItem {
         background: $color-blue;
         a {
           color: #FFFFFF;
@@ -98,6 +108,12 @@
         color: #333333;
         font-size: 14px;
       }
+      //&.activeItem {
+      //  background: $color-blue;
+      //  a {
+      //    color: #FFFFFF;
+      //  }
+      //}
     }
     &.show {
       display: block;
@@ -110,6 +126,8 @@
   font-weight: $semibold;
   font-size: 14px;
   color: #000000;
+  padding: 15px 0 15px 12px;
+  min-height: 60px;
 }
 
 .filter-btn:not(.back-btn) {
@@ -132,7 +150,6 @@
 
 .catalog-item {
   background-color: #FFFFFF;
-  box-shadow: 0px 0px 12px rgba(196, 196, 196, 0.8);
   border-radius: 4px;
   align-items: center;
   padding: 30px 15px;
@@ -142,11 +159,12 @@
     max-width: 100%;
     width: 100%;
   }
-  a {
+  span.link--arrowed {
     margin-right: auto;
     margin-left: calc(100% - 30px);
   }
   &:hover {
+    box-shadow: 0px 0px 12px rgba(196, 196, 196, 0.8);
     .arrow-icon {
       transform: translate3d(5px, 0, 0);
     }

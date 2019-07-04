@@ -1,3 +1,5 @@
+var $ = jQuery;
+
 $(document).ready(function () {
     $('.top_banner_slider').slick({
         dots: true,
@@ -239,18 +241,24 @@ $(document).ready(function () {
             $('#ask-btn').addClass('gradient-btn')
         }
     }
-
+    findActiveMenuItemOnLoad();
+    function findActiveMenuItemOnLoad() {
+        $('li.activeItem').parent().addClass('show');
+        $('li.activeItem').closest('li.withDropMenu').addClass('opened')
+    }
 
     // --- FILE UPLOAD-------
-    // var uploadField = document.getElementById("file");
-    // uploadField.onchange = function () {
-    //     if (this.files[0].size > 10000000) {
-    //         $(".alert-message span").show();
-    //         this.value = "";
-    //     } else {
-    //         $(".alert-message span").hide();
-    //         $(".files-count").text(this.files.length);
-    //     }
-    // };
+    var uploadField = document.getElementById("file");
+    uploadField.onchange = function () {
+        if (this.files[0].size > 10000000) {
+            $(".alert-message span").show();
+            this.value = "";
+        } else {
+            $(".alert-message span").hide();
+            $(".files-count").text(this.files.length);
+        }
+    };
+
+
 });
 
