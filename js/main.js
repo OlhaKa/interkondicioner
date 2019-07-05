@@ -23,7 +23,7 @@ $(document).ready(function () {
 
     document.addEventListener('click',
         closeMenuOnClickOutside,
-        hideOnClickOutside(".contact-form"),
+        hideOnClickOutside("header .contact-form"),
         hideOnClickOutside(".search-wrap"),
         hideOnClickOutside(".phones-popup"));
 
