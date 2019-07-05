@@ -43,9 +43,12 @@
     &.withDropMenu:after {
       content: url(../media/shevron.svg);
       position: absolute;
-      top: 15px;
+      top: calc(50% - 4px);
       right: 13px;
       cursor: pointer;
+      height: 8px;
+      display: inline-block;
+      line-height: 0px;
     }
     &:hover {
       background: #F9F9F9;
@@ -72,9 +75,9 @@
         content: '';
         position: absolute;
         right: 0;
-        top: 0;
+        top: 15%;
         width: 1px;
-        height: 100%;
+        height: 70%;
         background-color: #222222;
         opacity: 0.2;
       }

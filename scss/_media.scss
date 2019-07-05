@@ -601,7 +601,7 @@
 
     .nav-item {
       position: relative;
-      padding: 14px 0;
+      padding: 14px 0 5px;
 
       &.withSubmenu:hover .nav-link:after {
         content: url("../media/shevron2_hover.svg") !important;
@@ -641,6 +641,7 @@
       &.current-link {
         .nav-link {
           color: $color-blue;
+          padding-bottom: 16px;
         }
         &:after {
           content: '';

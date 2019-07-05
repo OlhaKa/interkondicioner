@@ -23,7 +23,7 @@ $(document).ready(function () {
 
     document.addEventListener('click',
         closeMenuOnClickOutside,
-        hideOnClickOutside("header .contact-form"),
+        hideOnClickOutside("#contact-form-header"),
         hideOnClickOutside(".search-wrap"),
         hideOnClickOutside(".phones-popup"));
 
@@ -64,8 +64,8 @@ $(document).ready(function () {
     });
 
     $(".form-btn").click(function () {
-        $(".contact-form").slideToggle();
-        $(".contact-form form").trigger("reset");
+        $("#contact-form-header").slideToggle();
+        $("#contact-form-header form").trigger("reset");
         $("#file").val("");
         $(".files-count").text('0');
     });
