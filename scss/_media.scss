@@ -571,16 +571,7 @@
       margin-top: 65px;
     }
   }
-  .news {
-    h1 {
-      padding-top: 90px;
-    }
-  }
-  .program {
-    h1 {
-      padding-top: 70px;
-    }
-  }
+
 }
 
 @media (min-width: 1200px) {
@@ -613,7 +604,7 @@
           opacity: 1;
           z-index: 1;
           transform: translateY(0%);
-          transition-delay: 0s, 0s, 0.3s;
+          //transition-delay: 0s, 0s, 0.3s;
         }
 
         .nav-link {
@@ -668,8 +659,7 @@
       top: 100%;
       left: 0;
       transform: translateY(-2em);
-      z-index: -1;
-      transition: all 0.5s ease-in-out 0s, visibility 0s linear 0.5s, z-index 0s linear 0.01s, color 0.2s 0.5s;
+      transition: transform 0.5s ease-in 0s, visibility 0s linear 0.5s, color 0.2s 0.5s;
       background-color: #FFFFFF;
 
 

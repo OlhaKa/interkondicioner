@@ -38,27 +38,32 @@
     padding: 0 34px 0 0;
     & > a {
       border-left: 4px solid #FFFFFF;
+      display: flex;
+      align-items: center;
+      width: 100%;
     }
 
     &.withDropMenu:after {
       content: url(../media/shevron.svg);
       position: absolute;
-      top: calc(50% - 4px);
-      right: 13px;
+      top: calc(50% - 24px);
+      right: 3px;
       cursor: pointer;
       height: 8px;
       display: inline-block;
-      line-height: 0px;
+      line-height: 0;
+      padding: 20px 10px 30px;
     }
-    &:hover {
+    &:hover,
+    &.active-item {
       background: #F9F9F9;
       & > a {
-        //color: $color-blue;
         border-left: 4px solid $color-blue;
       }
     }
     &.withDropMenu.opened:after {
       content: url(../media/shevron2_hover.svg);
+      top: 5px;
     }
   }
 
@@ -90,15 +95,16 @@
       }
     }
   }
+
   .drop-menu {
     padding: 0;
+    width: 100%;
     display: none;
     li  {
       min-height: 54px;
       display: flex;
       align-items: center;
       margin-right: -34px;
-      padding: 0 34px 0 16px;
       &:hover,
       &.activeItem {
         background: $color-blue;
@@ -110,13 +116,9 @@
         font-weight: normal;
         color: #333333;
         font-size: 14px;
+        padding: 19px 10px 11px 34px;
+        width: 100%;
       }
-      //&.activeItem {
-      //  background: $color-blue;
-      //  a {
-      //    color: #FFFFFF;
-      //  }
-      //}
     }
     &.show {
       display: block;
@@ -205,14 +207,13 @@
     border-radius: 50%;
     margin: 0 3px;
     text-align: center;
+    display: inline-block;
     a {
       color: $color-violet;
     }
-    &:hover {
+    &.current {
       background: linear-gradient(90deg, #0085E6 0%, #61C2EF 100%);
-      a {
-        color: #FFFFFF;
-      }
+      color: #FFFFFF;
     }
   }
 }

@@ -23,6 +23,7 @@
 .contact-form {
   position: static;
   display: flex;
+  max-width: none;
   form {
     width: 100%;
   }

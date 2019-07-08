@@ -365,7 +365,7 @@ button {
 .allow-files {
   color: #7F899D;
   font-size: 12px;
-  margin-top: 5px;
+  margin-top: 10px;
 
   span {
     color: #2F3370;
@@ -449,6 +449,12 @@ button {
     right: 15px;
     top: 15px;
     cursor: pointer;
+    height: 24px;
+    width: 24px;
+    background: url("../media/close.svg") no-repeat center;
+    &:hover {
+      background: url("../media/closeHover.svg") no-repeat center;
+    }
   }
 
   p {
@@ -578,14 +584,13 @@ button {
 
   .download-file {
     margin-bottom: 17px;
-    margin-top: 28px;
+    margin-top: 20px;
     width: 360px;
     max-width: 70%;
 
     div {
       display: flex;
       align-items: center;
-      margin-top: 20px;
       position: relative;
     }
 
@@ -621,9 +626,10 @@ button {
     }
   }
 
-  button {
+  .gradient-btn {
     border: none;
     margin: 0 auto;
+    width: 166px;
   }
 }
 
@@ -643,6 +649,10 @@ header {
 
   .header-top {
     display: none;
+  }
+  .header-btm {
+    box-shadow: 0px 4px 4px rgba(196, 196, 196, 0.5);
+    border-bottom: none;
   }
 }
 }
@@ -689,7 +699,7 @@ footer {
   .phones {
     display: flex;
     flex-direction: column;
-
+    margin-left: 25px;
     a {
       margin: 6px 0;
 
@@ -705,7 +715,7 @@ footer {
       color: $color-light-blue;
       font-size: 21px;
       position: absolute;
-      left: -7px;
+      left: 15px;
     }
   }
 
@@ -760,7 +770,7 @@ footer {
 
 .breadcrumb {
   background-color: transparent;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   padding: 13px 0 0 0;
 
   a {
