@@ -829,15 +829,13 @@ footer {
   overflow: hidden;
   top: 0;
   right: 0;
-  background-color: $color-light-blue;
+  background: right 5px top 7px / 15px auto no-repeat url("../media/Arrow-white.svg"), $color-light-blue;
   border-radius: 0 4px 0 32px;
 }
 
 .go-arrow {
-  margin-top: -4px;
-  margin-right: -4px;
-  color: white;
-  font-family: sans-serif;
+  display: none;
+
 }
 
 //---------- ANCHOR ---------
@@ -853,6 +851,9 @@ footer {
   position: fixed;
   right: 216px;
   bottom: 100px;
-  z-index: 10;
+  z-index: 9;
   cursor: pointer;
+  &.hide {
+    display: none;
+  }
 }

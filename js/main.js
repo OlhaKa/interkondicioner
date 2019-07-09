@@ -1,17 +1,18 @@
 var $ = jQuery;
 
-var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-
-if(!isChrome) {
-    document.getElementsByClassName('infinityChrome')[0].style.display = "none";
-    document.getElementsByClassName('infinity')[0].style.display = "block";
-}
-
 $(window).on('load', function () {
     $("#preloader").fadeOut("slow");
 });
 
 $(document).ready(function () {
+
+    if ($(".infinity").length) {
+        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (!isChrome) {
+            document.getElementsByClassName('infinityChrome')[0].style.display = "none";
+            document.getElementsByClassName('infinity')[0].style.display = "block";
+        }
+    }
 
     $('#tel').inputmask("+38 (999) 999 99 99");
 
@@ -43,7 +44,7 @@ $(document).ready(function () {
 
 
     function closeMenuOnClickOutside(evt) {
-        $('body').on('click',function(e){
+        $('body').on('click', function (e) {
             const $menu = $('#navbar');
             if (!$menu.is(e.target)
                 && $menu.has(e.target).length === 0) {
@@ -53,7 +54,7 @@ $(document).ready(function () {
     }
 
     function hideOnClickOutside(blockName) {
-        $('body').on('click',function(e){
+        $('body').on('click', function (e) {
             if (!$(blockName).is(e.target)
                 && $(blockName).has(e.target).length === 0
                 && !$(event.target).is(".search-btn")
@@ -61,7 +62,7 @@ $(document).ready(function () {
                 $(blockName).slideUp();
             }
         });
-        $(window).on('scroll',function(){
+        $(window).on('scroll', function () {
             $(blockName).slideUp();
         })
     }
@@ -155,6 +156,7 @@ $(document).ready(function () {
 
     // ----------- HEADER VIEW CHANGE---------
     changeHeaderView();
+
     function changeHeaderView() {
         var scroll = $(window).scrollTop();
         if (scroll > 140) {
@@ -195,6 +197,7 @@ $(document).ready(function () {
 
     // ----------- CATALOG SIDEBAR ------------
     hideSidebarArrows();
+
     function hideSidebarArrows() {
         var menuItems = $('.components').children();
         $.each(menuItems, function () {
@@ -217,19 +220,25 @@ $(document).ready(function () {
 
 
     // ============ ANCHOR TO PAGE TOP =========
+    const anchor = $('#anchor');
+
     hideAnchor();
+
     function hideAnchor() {
         var scroll = $(window).scrollTop();
-        if (scroll < window.innerHeight) {
-            $('#anchor').fadeOut();
+        if (scroll < window.innerHeight || $('#navbar').hasClass('show')) {
+            anchor.fadeOut();
         } else {
-            $('#anchor').fadeIn();
-            console.log($(window).innerHeight)
+            anchor.fadeIn();
         }
     };
 
-    $('#anchor').click(function () {
+    anchor.click(function () {
         window.scrollTo(0, 0)
+    });
+    
+    $('.navbar-toggler').click(function () {
+        anchor.toggleClass('hide')
     });
 
     // ============ ANCHOR TO PAGE TOP end=========
@@ -243,10 +252,10 @@ $(document).ready(function () {
         changeMobHeader();
         checkSubmenu()
     });
-    
-    
+
+
     function checkSubmenu() {
-        $('.openSubmenu').each(function() {
+        $('.openSubmenu').each(function () {
             if ($(this).next('ul').length < 1) {
                 $(this).hide()
             }
@@ -274,7 +283,9 @@ $(document).ready(function () {
             $('#ask-btn').addClass('gradient-btn')
         }
     }
+
     findActiveMenuItemOnLoad();
+
     function findActiveMenuItemOnLoad() {
         $('li.activeItem').parent().addClass('show');
         $('li.activeItem').closest('li.withDropMenu').addClass('opened')

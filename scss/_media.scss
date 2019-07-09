@@ -120,6 +120,7 @@
     width: 40px;
     height: 40px;
     bottom: 50px;
+
     img {
       max-width: 20px;
     }
@@ -244,6 +245,7 @@
   }
   .home-catalog {
     padding: 60px 15px;
+
     h1 {
       margin-bottom: 43px;
     }
@@ -423,6 +425,7 @@
       background-color: #FFFFFF;
       box-shadow: 0px 0px 8px #C4C4C4;
       border-radius: 4px;
+      min-height: 100vh;
 
       .nav {
         flex-direction: column;
@@ -641,11 +644,13 @@
         width: 0;
         z-index: 2;
       }
+
       &.current-link {
         .nav-link {
           color: $color-blue;
           padding-bottom: 16px;
         }
+
         &:after {
           content: '';
           position: absolute;
