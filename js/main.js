@@ -1,6 +1,9 @@
 var $ = jQuery;
 
 $(document).ready(function () {
+
+    $('#tel').inputmask("+38 (999) 999 99 99");
+
     $('.top_banner_slider').slick({
         dots: true,
         infinite: true,

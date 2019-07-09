@@ -1,5 +1,7 @@
 .news {
-  background: url("../media/news-bg.png") no-repeat right top, linear-gradient(179.14deg, rgba(245, 245, 245, 0.6) 7.74%, #FFFFFF 91.34%);
+  background: right top / 80Vmax auto no-repeat url("../media/news-bg.png"),
+  linear-gradient(179.14deg, rgba(245, 245, 245, 0.6) 7.74%, #FFFFFF 91.34%),
+  linear-gradient(90.23deg, rgba(97, 194, 239, 0.1) 10.26%, #61C2EF 83.3%);
   position: relative;
 }
 
