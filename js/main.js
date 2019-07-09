@@ -1,5 +1,16 @@
 var $ = jQuery;
 
+var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+
+if(!isChrome) {
+    document.getElementsByClassName('infinityChrome')[0].style.display = "none";
+    document.getElementsByClassName('infinity')[0].style.display = "block";
+}
+
+$(window).on('load', function () {
+    $("#preloader").fadeOut("slow");
+});
+
 $(document).ready(function () {
 
     $('#tel').inputmask("+38 (999) 999 99 99");
@@ -144,7 +155,6 @@ $(document).ready(function () {
 
     // ----------- HEADER VIEW CHANGE---------
     changeHeaderView();
-
     function changeHeaderView() {
         var scroll = $(window).scrollTop();
         if (scroll > 140) {
@@ -157,6 +167,7 @@ $(document).ready(function () {
 
     $(window).scroll(function () {
         changeHeaderView();
+        hideAnchor()
     });
 
 
@@ -204,6 +215,24 @@ $(document).ready(function () {
         })
     };
 
+
+    // ============ ANCHOR TO PAGE TOP =========
+    hideAnchor();
+    function hideAnchor() {
+        var scroll = $(window).scrollTop();
+        if (scroll < window.innerHeight) {
+            $('#anchor').fadeOut();
+        } else {
+            $('#anchor').fadeIn();
+            console.log($(window).innerHeight)
+        }
+    };
+
+    $('#anchor').click(function () {
+        window.scrollTo(0, 0)
+    });
+
+    // ============ ANCHOR TO PAGE TOP end=========
 
     $('.filter-btn').click(function () {
         $('#sidebar').toggleClass('shown')

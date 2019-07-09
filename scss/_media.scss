@@ -116,6 +116,14 @@
 }
 
 @media (max-width: 767.98px) {
+  body #anchor {
+    width: 40px;
+    height: 40px;
+    bottom: 50px;
+    img {
+      max-width: 20px;
+    }
+  }
   main {
     .breadcrumb {
       margin-bottom: 43px;
@@ -403,7 +411,6 @@
   }
 }
 
-
 @media (max-width: 1199.98px) {
   header .header-btm {
     .navbar-collapse {
@@ -539,6 +546,11 @@
   }
 }
 
+@media (max-width: 1600px) {
+  body #anchor {
+    right: 5vw;
+  }
+}
 
 @media (min-width: 576px) {
   main {
