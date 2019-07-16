@@ -105,7 +105,8 @@ $(document).ready(function () {
         asNavFor: '.preview-slider',
         arrows: true,
         prevArrow: $('.prev'),
-        nextArrow: $('.next')
+        nextArrow: $('.next'),
+        focusOnSelect: true
     });
 
     $('.news-img').on('init', function () {

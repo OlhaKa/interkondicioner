@@ -3,7 +3,7 @@
   position: relative;
   user-select: none;
   h1 {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
   .back-btn {
     margin-top: 48px;
@@ -64,7 +64,7 @@
 }
 
 .product-description {
-  margin: 80px auto 0;
+  margin: 60px auto 0;
   .nav-tabs {
     border: none;
     width: max-content;
@@ -169,7 +169,8 @@
     height: inherit;
     display: flex;
     align-items: center;
-    &:hover {
+    &:hover,
+    &.slick-current {
       border: 1px solid #0085E6;
     }
   }
