@@ -39,6 +39,7 @@ $(document).ready(function () {
             {
                 breakpoint: 1200,
                 settings: {
+                    vertical: false,
                     adaptiveHeight: true
                 }
             }
@@ -297,6 +298,22 @@ $(document).ready(function () {
         $('li.activeItem').parent().addClass('show');
         $('li.activeItem').closest('li.withDropMenu').addClass('opened')
     }
+
+    function activateMap(map, frame) {
+        $(map).click(function () {
+            $(frame).css("pointer-events", "auto");
+        });
+    }
+    activateMap('.map-wrap', '.map-wrap iframe');
+
+
+    function disableMap(map, frame) {
+        $(map).hover(function() {
+            $(frame).css("pointer-events", "none");
+        });
+    }
+
+    disableMap(".map-wrap", '.map-wrap iframe');
 
     // --- FILE UPLOAD-------
     var uploadField = document.getElementById("file");

@@ -30,9 +30,15 @@
 }
   .map-wrap {
     margin-top: 71px;
+    height: 600px;
     .container {
       display: flex;
       justify-content: center;
+      height: 100%;
+      iframe {
+        height: 100%;
+        width: 100%;
+      }
     }
   }
 }

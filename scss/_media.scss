@@ -107,15 +107,34 @@
   .top_banner_slider_arrowsBox {
     display: none;
   }
-  .top_banner_slider .banner {
-    //height: 360px !important;
-  }
   header .contact-form {
     padding: 45px 10px 20px 10px;
+  }
+  .search-wrap .search-line input {
+    min-width: 250px;
+  }
+  .map-wrap {
+    height: 320px !important;
   }
 }
 
 @media (max-width: 767.98px) {
+  body .product-description-sm .tab-content table {
+    tr td:first-child {
+      width: auto;
+    }
+
+    .gradient-btn {
+      font-size: 12px;
+      height: 30px;
+      padding: 0 10px;
+    }
+    .border-btn {
+      height: 30px;
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+  }
   body #anchor {
     width: 40px;
     height: 40px;
@@ -252,9 +271,11 @@
   }
   .cat-downloads {
     text-align: center;
+
     h4 {
-      max-width: 20px 0;
+      margin: 20px 0;
     }
+
     table {
       margin: 0 auto;
     }
@@ -265,6 +286,10 @@
   }
   body .offices h1 {
     margin-bottom: 0;
+  }
+  body .offices .map-wrap,
+  body .contacts .map-wrap {
+    height: 435px;
   }
 }
 
@@ -441,19 +466,18 @@
   header .header-btm {
     .navbar-collapse {
       position: fixed;
-      overflow-y: auto;
+      overflow-y: scroll;
       top: 0;
       bottom: 0;
       right: 0;
       z-index: 10;
       background-color: #FFFFFF;
-      box-shadow: 0px 0px 8px #C4C4C4;
+      box-shadow: 0 0 8px #C4C4C4;
       border-radius: 4px;
-      min-height: 100vh;
-
+      height: 95vh;
+      padding-bottom: 34px;
       .nav {
         flex-direction: column;
-        padding-bottom: 34px;
 
         .nav-item {
           .nav-link {
@@ -567,11 +591,6 @@
       }
     }
   }
-  body .top_banner_slider {
-    .banner {
-      //height: calc(100vh - 67px);
-    }
-  }
 }
 
 @media (max-width: 1600px) {
@@ -593,7 +612,7 @@
   .about {
     background: url("../media/about_bg.png") no-repeat;
     background-position-x: 50%;
-    background-position-y: calc(30% + 600px);
+    background-position-y: 750px;
   }
 }
 
