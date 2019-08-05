@@ -1,4 +1,5 @@
 .offices {
+  background: #F5F5F5;
   h1 {
     margin-bottom: 77px;
   }
@@ -14,6 +15,7 @@
     margin-top: 30px;
   }
   .map-wrap {
+    max-width: 100%;
     display: flex;
     justify-content: center;
   }

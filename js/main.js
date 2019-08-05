@@ -17,6 +17,8 @@ $(document).ready(function () {
     $('#tel').inputmask("+38 (999) 999 99 99");
 
     $('.top_banner_slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
         dots: true,
         infinite: true,
         speed: 500,
@@ -31,6 +33,13 @@ $(document).ready(function () {
                 settings: {
                     dots: false,
                     vertical: false,
+                    adaptiveHeight: true,
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    adaptiveHeight: true
                 }
             }
         ]
@@ -62,9 +71,6 @@ $(document).ready(function () {
                 $(blockName).slideUp();
             }
         });
-        $(window).on('scroll', function () {
-            $(blockName).slideUp();
-        })
     }
 
     $(".search-btn").click(function () {
@@ -237,7 +243,7 @@ $(document).ready(function () {
     anchor.click(function () {
         window.scrollTo(0, 0)
     });
-    
+
     $('.navbar-toggler').click(function () {
         anchor.toggleClass('hide')
     });
@@ -251,9 +257,9 @@ $(document).ready(function () {
     $(window).on("load resize", function (e) {
         insertHeaderTop();
         changeMobHeader();
-        checkSubmenu()
-    });
+        checkSubmenu();
 
+    });
 
     function checkSubmenu() {
         $('.openSubmenu').each(function () {

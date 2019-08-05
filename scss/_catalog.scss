@@ -18,7 +18,7 @@
   &.shown {
     left: 0;
     top: 54px;
-    z-index: 1;
+    z-index: 2;
     width: 100%;
   }
 }
@@ -215,5 +215,21 @@
       background: linear-gradient(90deg, #0085E6 0%, #61C2EF 100%);
       color: #FFFFFF;
     }
+  }
+}
+
+
+//====== download catalog=======
+
+.cat-downloads {
+  img {
+    max-width: 120px;
+  }
+  .gradient-btn {
+    width: 110px;
+    margin-right: 20px;
+  }
+  .border-btn {
+    width: 142px;
   }
 }
