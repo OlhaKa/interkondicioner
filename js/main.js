@@ -167,11 +167,13 @@ $(document).ready(function () {
 
     function changeHeaderView() {
         var scroll = $(window).scrollTop();
-        if (scroll > 140) {
-            $('header').addClass('scrolled', "slow");
+        var width = $(window).width();
+        if (scroll > 72 && width > 1199) {
+            $('header').addClass('scrolled');
+            $('main').addClass('withTopMargin')
         } else {
             $('header').removeClass('scrolled');
-
+            $('main').removeClass('withTopMargin')
         }
     }
 
@@ -259,8 +261,15 @@ $(document).ready(function () {
         insertHeaderTop();
         changeMobHeader();
         checkSubmenu();
-
+        hideAboutBg();
     });
+
+
+    function hideAboutBg() {
+        if ($('.about').height() < 900 ) {
+            $('.about').css("background", "none")
+        }
+    }
 
     function checkSubmenu() {
         $('.openSubmenu').each(function () {

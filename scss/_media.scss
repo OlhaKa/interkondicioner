@@ -15,6 +15,9 @@
 }
 
 @media (max-width: 575.98px) {
+  main .contact-form .form-item {
+    width: 280px;
+  }
   .program {
     h1 {
       padding-top: 26px;
@@ -109,6 +112,8 @@
   }
   header .contact-form {
     padding: 45px 10px 20px 10px;
+    overflow-y: auto;
+    max-height: calc(100vh - 100px);
   }
   .search-wrap .search-line input {
     min-width: 250px;
@@ -192,8 +197,12 @@
   }
   .history {
     padding-top: 40px;
+  }
+
+  .about {
     background: linear-gradient(180deg, rgba(97, 194, 239, 0.4) 0%, rgba(255, 255, 255, 0.4) 44.6%);
   }
+
   main .docs-grid {
     grid-template-columns: 1fr;
   }
@@ -591,6 +600,17 @@
       }
     }
   }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  main {
+    margin-top: 68px;
+  }
 }
 
 @media (max-width: 1600px) {
@@ -612,7 +632,7 @@
   .about {
     background: url("../media/about_bg.png") no-repeat;
     background-position-x: 50%;
-    background-position-y: 750px;
+    background-position-y: 1000px;
   }
 }
 
@@ -639,6 +659,9 @@
 }
 
 @media (min-width: 1200px) {
+  main.withTopMargin {
+    margin-top: 140px;
+  }
   .top_banner_slider .banner img {
     height: 100%;
     width: 100%;
@@ -801,5 +824,12 @@
 @media (min-width: 768px) and (max-width: 1199.98px) {
   .header-btm .logo {
     display: block !important;
+  }
+}
+
+@media all and (orientation:landscape) {
+  header .contact-form {
+    overflow-y: auto;
+    max-height: calc(100vh - 68px);
   }
 }
