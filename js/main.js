@@ -266,7 +266,7 @@ $(document).ready(function () {
 
 
     function hideAboutBg() {
-        if ($('.about').height() < 900 ) {
+        if ($('.about').height() < 900) {
             $('.about').css("background", "none")
         }
     }
@@ -313,11 +313,12 @@ $(document).ready(function () {
             $(frame).css("pointer-events", "auto");
         });
     }
+
     activateMap('.map-wrap', '.map-wrap iframe');
 
 
     function disableMap(map, frame) {
-        $(map).hover(function() {
+        $(map).hover(function () {
             $(frame).css("pointer-events", "none");
         });
     }
@@ -335,7 +336,6 @@ $(document).ready(function () {
             $(".files-count").text(this.files.length);
         }
     };
-
 
 });
 
