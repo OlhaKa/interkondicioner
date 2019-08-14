@@ -345,5 +345,5 @@ $(document).ready(function () {
         }
     };
 
-});
+    });
 
