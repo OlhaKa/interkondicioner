@@ -218,7 +218,6 @@ $(document).ready(function () {
     }
 
     toggleSidebarMenu();
-
     function toggleSidebarMenu() {
         $(".withDropMenu").click(function (e) {
             if ($(this).has(e.target).length === 0) {
@@ -226,7 +225,16 @@ $(document).ready(function () {
                 $(this).toggleClass("opened")
             }
         })
-    };
+    }
+
+    toggleSidebarMenuByLink();
+    function toggleSidebarMenuByLink() {
+        $(".withDropMenu a").click(function (e) {
+            e.preventDefault();
+            $(this).siblings(".drop-menu").toggleClass("show");
+            $(this).parent('li').toggleClass("opened")
+        })
+    }
 
 
     // ============ ANCHOR TO PAGE TOP =========
