@@ -136,6 +136,15 @@ $(document).ready(function () {
         ]
     });
 
+
+    $('.about-slider').on('init', function () {
+        console.log(123);
+        if ($('.about-slider .slick-slide').length <= 1) {
+            console.log(123);
+            $('.about-slider .slick-dots').hide();
+        }
+    });
+
     $('.about-slider').slick({
         slidesToShow: 3,
         prevArrow: $('.about-slider-arrows .prev'),
@@ -158,6 +167,8 @@ $(document).ready(function () {
             }
         ]
     });
+
+
     $('[data-fancybox="aboutGallery"]').fancybox();
     $('[data-fancybox="newsGallery"]').fancybox();
     $('[data-fancybox="docs"]').fancybox();
