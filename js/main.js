@@ -240,7 +240,7 @@ $(document).ready(function () {
 
     toggleSidebarMenuByLink();
     function toggleSidebarMenuByLink() {
-        $(".withDropMenu a").click(function (e) {
+        $(".withDropMenu>a").click(function (e) {
             e.preventDefault();
             $(this).siblings(".drop-menu").toggleClass("show");
             $(this).parent('li').toggleClass("opened")
@@ -286,7 +286,9 @@ $(document).ready(function () {
 
     function hideAboutBg() {
         if ($('.about').height() < 900) {
-            $('.about').css("background", "none")
+            $('.about').css({
+                background: "linear-gradient(180deg, rgba(97, 194, 239, 0.4) 0%, rgba(255, 255, 255, 0.4) 44.6%)"
+            })
         }
     }
 

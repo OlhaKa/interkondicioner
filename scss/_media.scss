@@ -73,8 +73,9 @@
   .pagination {
     position: static;
   }
-  main {
+  body main {
     padding-bottom: 64px;
+    min-height: calc(100vh - 574px);
   }
   .about-slider-arrows {
     display: none;
@@ -920,3 +921,4 @@
     display: none;
   }
 }
+
