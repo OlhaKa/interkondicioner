@@ -81,8 +81,8 @@ $(document).ready(function () {
     $(".openSubmenu").click(function () {
         $(this).next('ul').slideToggle();
         $(this).toggleClass('opened');
-        $('.drop-menu ul').not($(this).next()).slideUp();
-        $(".openSubmenu").not($(this)).removeClass('opened');
+        // $('.drop-menu ul').not($(this).next()).slideUp();  todo: need to fix it;
+        // $(".openSubmenu").not($(this)).removeClass('opened'); todo: need to fix it;
     });
 
     $(".form-btn").click(function () {
@@ -138,9 +138,7 @@ $(document).ready(function () {
 
 
     $('.about-slider').on('init', function () {
-        console.log(123);
         if ($('.about-slider .slick-slide').length <= 1) {
-            console.log(123);
             $('.about-slider .slick-dots').hide();
         }
     });
@@ -207,11 +205,11 @@ $(document).ready(function () {
 
 
     toggleDropMenu();
-
     function toggleDropMenu() {
         $(".withSubmenu .nav-link").click(function () {
             $(this).toggleClass("active");
             $('.drop-menu').not($(this).next()).removeClass("show");
+            $('.withSubmenu .nav-link').not($(this)).removeClass("active");
             $(this).next(".drop-menu").toggleClass("show");
         })
     }
@@ -245,6 +243,17 @@ $(document).ready(function () {
             $(this).siblings(".drop-menu").toggleClass("show");
             $(this).parent('li').toggleClass("opened")
         })
+    }
+
+    toggleNavMenuByLink();
+    function toggleNavMenuByLink() {
+        if ($(window).width() < 1200) {
+            $(".menu-column .dropdown-item").click(function (e) {
+                e.preventDefault();
+                $(this).next().next().slideToggle();
+                $(this).next(".openSubmenu ").toggleClass("opened");
+            })
+        }
     }
 
 
@@ -283,11 +292,16 @@ $(document).ready(function () {
         hideAboutBg();
     });
 
-
     function hideAboutBg() {
-        if ($('.about').height() < 900) {
+        let bgPosition = $('.about-banner').height();
+        if ($(window).width() <= 768) {
             $('.about').css({
-                background: "linear-gradient(180deg, rgba(97, 194, 239, 0.4) 0%, rgba(255, 255, 255, 0.4) 44.6%)"
+                background: "linear-gradient(180deg, rgba(97, 194, 239, 0.4) 0%, rgba(255, 255, 255, 0.4) 44.6%)",
+                backgroundPositionY: bgPosition
+            })
+        } else if ($('.about').height() < 900 && $(window).width() > 768) {
+            $('.about').css({
+                background: "none",
             })
         }
     }
@@ -298,7 +312,7 @@ $(document).ready(function () {
                 $(this).hide()
             }
         })
-    };
+    }
 
     function insertHeaderTop() {
         if ($(window).width() <= 1180) {

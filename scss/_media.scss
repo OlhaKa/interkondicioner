@@ -261,10 +261,6 @@
     padding-top: 40px;
   }
 
-  .about {
-    background: linear-gradient(180deg, rgba(97, 194, 239, 0.4) 0%, rgba(255, 255, 255, 0.4) 44.6%);
-  }
-
   main .docs-grid {
     grid-template-columns: 1fr;
   }
@@ -733,6 +729,9 @@
 }
 
 @media (min-width: 1200px) {
+  .top_banner_slider {
+    margin-top: -1px;
+  }
   main.withTopMargin {
     margin-top: 140px;
   }
@@ -798,7 +797,6 @@
       &.current-link {
         .nav-link {
           color: $color-blue;
-          padding-bottom: 16px;
         }
 
         &:after {
@@ -845,6 +843,7 @@
         border-left: 4px solid #FFFFFF;
 
         &:hover {
+          color: $color-light-blue;
           border-left: 4px solid $color-light-blue;
         }
       }
