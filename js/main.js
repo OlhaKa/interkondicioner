@@ -249,9 +249,11 @@ $(document).ready(function () {
     function toggleNavMenuByLink() {
         if ($(window).width() < 1200) {
             $(".menu-column .dropdown-item").click(function (e) {
-                e.preventDefault();
-                $(this).next().next().slideToggle();
-                $(this).next(".openSubmenu ").toggleClass("opened");
+                if ($(this).next().css('display') === 'block') {
+                    e.preventDefault();
+                    $(this).next().next().slideToggle();
+                    $(this).next(".openSubmenu ").toggleClass("opened");
+                }
             })
         }
     }
@@ -307,6 +309,7 @@ $(document).ready(function () {
     }
 
     function checkSubmenu() {
+        $('.dropdown-item').after('<span class="openSubmenu"></span>');
         $('.openSubmenu').each(function () {
             if ($(this).next('ul').length < 1) {
                 $(this).hide()
