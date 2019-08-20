@@ -1,6 +1,12 @@
 .about {
   .text-row {
     margin-top: 59px;
+    a {
+      color: $color-blue;
+      &:hover {
+        color: $color-light-blue;
+      }
+    }
   }
 
  nav {
@@ -115,12 +121,20 @@
   img {
     margin-top: 30px;
   }
+  a {
+    color: $color-blue;
+    &:hover {
+      color: $color-light-blue;
+    }
+  }
 }
 
 .video-wrap {
   width: 100%;
   video {
     width: 100%;
+    padding-bottom: 30px;
+    outline: none;
   }
 
 }

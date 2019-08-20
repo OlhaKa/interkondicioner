@@ -14,7 +14,8 @@ $(document).ready(function () {
         }
     }
 
-    $('#tel').inputmask("+38 (999) 999 99 99");
+    $('#contact-form-header #tel').inputmask("+38 (999) 999 99 99");
+    $('.common-contacts #tel').inputmask("+38 (999) 999 99 99");
 
     $('.top_banner_slider').slick({
         slidesToShow: 1,
@@ -170,6 +171,7 @@ $(document).ready(function () {
     $('[data-fancybox="aboutGallery"]').fancybox();
     $('[data-fancybox="newsGallery"]').fancybox();
     $('[data-fancybox="docs"]').fancybox();
+    $('[data-fancybox="product"]').fancybox();
 
     // ----------- HEADER VIEW CHANGE---------
     changeHeaderView();
@@ -375,5 +377,13 @@ $(document).ready(function () {
         }
     };
 
+
+    $('.video-wrap video').hover(function toggleControls() {
+        if (this.hasAttribute("controls")) {
+            this.removeAttribute("controls")
+        } else {
+            this.setAttribute("controls", "controls")
+        }
+    })
     });
 

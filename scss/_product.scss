@@ -101,6 +101,12 @@
   img {
     max-width: 100%;
   }
+  a {
+    color: $color-blue;
+    &:hover {
+      color: $color-light-blue;
+    }
+  }
   table {
     width: 100%;
     tr {
