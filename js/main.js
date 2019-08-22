@@ -207,6 +207,7 @@ $(document).ready(function () {
 
 
     toggleDropMenu();
+
     function toggleDropMenu() {
         $(".withSubmenu .nav-link").click(function () {
             $(this).toggleClass("active");
@@ -229,6 +230,7 @@ $(document).ready(function () {
     }
 
     toggleSidebarMenu();
+
     function toggleSidebarMenu() {
         $(".withDropMenu").click(function (e) {
             if ($(this).has(e.target).length === 0) {
@@ -239,6 +241,7 @@ $(document).ready(function () {
     }
 
     toggleSidebarMenuByLink();
+
     function toggleSidebarMenuByLink() {
         $(".withDropMenu>a").click(function (e) {
             e.preventDefault();
@@ -248,6 +251,7 @@ $(document).ready(function () {
     }
 
     toggleNavMenuByLink();
+
     function toggleNavMenuByLink() {
         if ($(window).width() < 1200) {
             $(".menu-column .dropdown-item").click(function (e) {
@@ -366,17 +370,16 @@ $(document).ready(function () {
     disableMap(".map-wrap", '.map-wrap iframe');
 
     // --- FILE UPLOAD-------
-    var uploadField = document.getElementById("file");
-    uploadField.onchange = function () {
-        if (this.files[0].size > 10000000) {
-            $(".alert-message span").show();
-            this.value = "";
-        } else {
-            $(".alert-message span").hide();
-            $(".files-count").text(this.files.length);
-        }
-    };
-
+    // var uploadField = document.getElementById("file");
+    // uploadField.onchange = function () {
+    //     if (this.files[0].size > 10000000) {
+    //         $(".alert-message span").show();
+    //         this.value = "";
+    //     } else {
+    //         $(".alert-message span").hide();
+    //         $(".files-count").text(this.files.length);
+    //     }
+    // };
 
     $('.video-wrap video').hover(function toggleControls() {
         if (this.hasAttribute("controls")) {
@@ -384,6 +387,16 @@ $(document).ready(function () {
         } else {
             this.setAttribute("controls", "controls")
         }
-    })
     });
+
+    // ======WRAP FOR SELF ADDED TABLES=======
+
+    function addTableWrap(table) {
+        table.wrap( "<div class='table-wrap'></div>").addClass('customTable');
+    }
+    addTableWrap($('.news-item table'));
+    addTableWrap($('#productContent #a table'));
+    addTableWrap($('.product-description-sm  #collapseOne table'));
+    addTableWrap($('.about table'))
+});
 
