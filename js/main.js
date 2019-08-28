@@ -97,8 +97,6 @@ $(document).ready(function () {
         $(".phones-popup").slideToggle();
     });
 
-    $(".current-year").text((new Date).getFullYear());
-
     $(".product-description").width($("#product").width());
 
     $('.preview-slider').slick({
@@ -370,24 +368,16 @@ $(document).ready(function () {
     disableMap(".map-wrap", '.map-wrap iframe');
 
     // --- FILE UPLOAD-------
-    // var uploadField = document.getElementById("file");
-    // uploadField.onchange = function () {
-    //     if (this.files[0].size > 10000000) {
-    //         $(".alert-message span").show();
-    //         this.value = "";
-    //     } else {
-    //         $(".alert-message span").hide();
-    //         $(".files-count").text(this.files.length);
-    //     }
-    // };
-
-    $('.video-wrap video').hover(function toggleControls() {
-        if (this.hasAttribute("controls")) {
-            this.removeAttribute("controls")
+    var uploadField = document.getElementById("file");
+    uploadField.onchange = function () {
+        if (this.files[0].size > 10000000) {
+            $(".alert-message span").show();
+            this.value = "";
         } else {
-            this.setAttribute("controls", "controls")
+            $(".alert-message span").hide();
+            $(".files-count").text(this.files.length);
         }
-    });
+    };
 
     // ======WRAP FOR SELF ADDED TABLES=======
 
