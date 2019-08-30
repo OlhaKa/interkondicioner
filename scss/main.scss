@@ -528,14 +528,14 @@ button {
       visibility: hidden;
     }
   }
-  label[for=file] {
+  label[for=file],
+  label[for=file-upload] {
     width: 24px;
     height: 30px;
     position: relative;
     margin-bottom: -15px;
     margin-left: -28px;
     opacity: 1;
-
     &:before {
       display: inline-block;
       content: '\f019';
