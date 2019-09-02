@@ -368,27 +368,32 @@ $(document).ready(function () {
     disableMap(".map-wrap", '.map-wrap iframe');
 
     // --- FILE UPLOAD-------
-    let uploadField = document.getElementById("file");
-    uploadField.onchange = function () {
-        if (this.files[0].size > 10000000) {
-            $("#contact-form-header .alert-message span").show();
-            this.value = "";
-        } else {
-            $("#contact-form-header .alert-message span").hide();
-            $("#contact-form-header .files-count").text(this.files.length);
-        }
-    };
 
-    let fileUpload = document.getElementById("file-upload");
-    fileUpload.onchange = function () {
-        if (this.files[0].size > 10000000) {
-            $(".common-contacts .alert-message span").show();
-            this.value = "";
-        } else {
-            $(".common-contacts .alert-message span").hide();
-            $(".common-contacts .files-count").text(this.files.length);
-        }
-    };
+    if (  $("input").is("#file")) {
+        let uploadField = document.getElementById("file");
+        uploadField.onchange = function () {
+            if (this.files[0].size > 10000000) {
+                $("#contact-form-header .alert-message span").show();
+                this.value = "";
+            } else {
+                $("#contact-form-header .alert-message span").hide();
+                $("#contact-form-header .files-count").text(this.files.length);
+            }
+        };
+    }
+
+    if ($("input").is("#file-upload")) {
+        let fileUpload = document.getElementById("file-upload");
+        fileUpload.onchange = function () {
+            if (this.files[0].size > 10000000) {
+                $(".common-contacts .alert-message span").show();
+                this.value = "";
+            } else {
+                $(".common-contacts .alert-message span").hide();
+                $(".common-contacts .files-count").text(this.files.length);
+            }
+        };
+    }
 
     // ======WRAP FOR SELF ADDED TABLES=======
 
